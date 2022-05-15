@@ -76,10 +76,7 @@
 	},
 	"eventSheets": {
 		"items": [
-			"MainHub Event Sheet",
-			"NewArea1 Event Sheet",
-			"NewArea2 Event Sheet",
-			"NewArea3 Event Sheet"
+			"Event Sheet"
 		],
 		"subfolders": []
 	},
