@@ -221,10 +221,10 @@
 					"conditions": [
 						{
 							"id": "on-collision-with-another-object",
-							"objectClass": "MainHubTeleport",
-							"sid": 194328480008652,
+							"objectClass": "Player",
+							"sid": 857392248275262,
 							"parameters": {
-								"object": "Player"
+								"object": "MainHubTeleport"
 							}
 						}
 					],
