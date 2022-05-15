@@ -10,7 +10,7 @@
 					"type": "Player",
 					"properties": {
 						"initially-visible": true,
-						"initial-animation": "Animation 1",
+						"initial-animation": "Standing",
 						"initial-frame": 0,
 						"enable-collisions": true,
 						"live-preview": false
@@ -29,7 +29,7 @@
 								"acceleration": 600,
 								"deceleration": 500,
 								"directions": "dir-8",
-								"set-angle": "smooth",
+								"set-angle": "no",
 								"default-controls": true,
 								"enabled": true
 							}
@@ -41,8 +41,8 @@
 						}
 					},
 					"world": {
-						"x": 408,
-						"y": 432,
+						"x": 691,
+						"y": 637,
 						"width": 93.45052166788582,
 						"height": 93.45052166788582,
 						"originX": 0.5,

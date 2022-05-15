@@ -15,6 +15,14 @@
 			"bundled": false
 		},
 		{
+			"type": "plugin",
+			"id": "Keyboard",
+			"name": "Keyboard",
+			"author": "Scirra",
+			"version": "r293.3",
+			"bundled": false
+		},
+		{
 			"type": "behavior",
 			"id": "bound",
 			"name": "Bound to layout",
@@ -42,7 +50,8 @@
 	"uniqueId": "lwoeto5yg1y",
 	"objectTypes": {
 		"items": [
-			"Player"
+			"Player",
+			"Keyboard"
 		],
 		"subfolders": []
 	},
