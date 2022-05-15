@@ -1,11 +1,40 @@
 {
-	"name": "Layout 1",
+	"name": "NewArea3",
 	"layers": [
 		{
 			"name": "Layer 0",
 			"overriden": 0,
 			"subLayers": [],
 			"instances": [
+				{
+					"type": "MainHubTeleport",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 11,
+					"instanceVariables": {},
+					"behaviors": {},
+					"world": {
+						"x": 117.5,
+						"y": 102.5,
+						"width": 139,
+						"height": 135,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
 				{
 					"type": "Player",
 					"properties": {
@@ -15,7 +44,7 @@
 						"enable-collisions": true,
 						"live-preview": false
 					},
-					"uid": 2,
+					"uid": 12,
 					"instanceVariables": {},
 					"behaviors": {
 						"BoundToLayout": {
@@ -41,8 +70,8 @@
 						}
 					},
 					"world": {
-						"x": 691,
-						"y": 637,
+						"x": 243,
+						"y": 212,
 						"width": 93.45052166788582,
 						"height": 93.45052166788582,
 						"originX": 0.5,
@@ -58,7 +87,7 @@
 					}
 				}
 			],
-			"sid": 623982990552541,
+			"sid": 564204267645762,
 			"effectTypes": [],
 			"isInitiallyVisible": true,
 			"isInitiallyInteractive": true,
@@ -87,7 +116,7 @@
 			"global": false
 		}
 	],
-	"sid": 281379531293282,
+	"sid": 385724389895134,
 	"nonworld-instances": [],
 	"effectTypes": [],
 	"width": 1708,
@@ -96,5 +125,5 @@
 	"vpX": 0.5,
 	"vpY": 0.5,
 	"projection": "perspective",
-	"eventSheet": "Event sheet 1"
+	"eventSheet": "NewArea3 Event Sheet"
 }

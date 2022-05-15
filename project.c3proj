@@ -51,7 +51,11 @@
 	"objectTypes": {
 		"items": [
 			"Player",
-			"Keyboard"
+			"Keyboard",
+			"NewArea1Teleport",
+			"MainHubTeleport",
+			"NewArea2Teleport",
+			"NewArea3Teleport"
 		],
 		"subfolders": []
 	},
@@ -63,13 +67,19 @@
 	},
 	"layouts": {
 		"items": [
-			"Layout 1"
+			"MainHub",
+			"NewArea1",
+			"NewArea2",
+			"NewArea3"
 		],
 		"subfolders": []
 	},
 	"eventSheets": {
 		"items": [
-			"Event sheet 1"
+			"MainHub Event Sheet",
+			"NewArea1 Event Sheet",
+			"NewArea2 Event Sheet",
+			"NewArea3 Event Sheet"
 		],
 		"subfolders": []
 	},
