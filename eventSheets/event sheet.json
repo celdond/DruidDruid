@@ -14,40 +14,6 @@
 						{
 							"id": "key-is-down",
 							"objectClass": "Keyboard",
-							"sid": 401400123412893,
-							"parameters": {
-								"key": 83
-							}
-						}
-					],
-					"actions": [
-						{
-							"id": "simulate-control",
-							"objectClass": "Player",
-							"sid": 289933150509222,
-							"behaviorType": "8Direction",
-							"parameters": {
-								"control": "down"
-							}
-						},
-						{
-							"id": "set-animation",
-							"objectClass": "Player",
-							"sid": 673273151857685,
-							"parameters": {
-								"animation": "\"PlayerDown\"",
-								"from": "beginning"
-							}
-						}
-					],
-					"sid": 568806896287119
-				},
-				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "key-is-down",
-							"objectClass": "Keyboard",
 							"sid": 221070971169568,
 							"parameters": {
 								"key": 87
@@ -67,7 +33,7 @@
 						{
 							"id": "set-animation",
 							"objectClass": "Player",
-							"sid": 315483085323147,
+							"sid": 907191990290413,
 							"parameters": {
 								"animation": "\"PlayerUp\"",
 								"from": "beginning"
@@ -101,7 +67,7 @@
 						{
 							"id": "set-animation",
 							"objectClass": "Player",
-							"sid": 310882249304638,
+							"sid": 580996017380178,
 							"parameters": {
 								"animation": "\"PlayerLeft\"",
 								"from": "beginning"
@@ -135,7 +101,7 @@
 						{
 							"id": "set-animation",
 							"objectClass": "Player",
-							"sid": 616128846937214,
+							"sid": 572016600522408,
 							"parameters": {
 								"animation": "\"PlayerRight\"",
 								"from": "beginning"
@@ -143,6 +109,40 @@
 						}
 					],
 					"sid": 111886914374697
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "key-is-down",
+							"objectClass": "Keyboard",
+							"sid": 963532289759907,
+							"parameters": {
+								"key": 83
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "simulate-control",
+							"objectClass": "Player",
+							"sid": 790398078279625,
+							"behaviorType": "8Direction",
+							"parameters": {
+								"control": "down"
+							}
+						},
+						{
+							"id": "set-animation",
+							"objectClass": "Player",
+							"sid": 781450488357159,
+							"parameters": {
+								"animation": "\"PlayerDown\"",
+								"from": "beginning"
+							}
+						}
+					],
+					"sid": 464552712968619
 				},
 				{
 					"eventType": "block",
@@ -239,6 +239,19 @@
 						}
 					],
 					"sid": 218005282798718
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-moving",
+							"objectClass": "Player",
+							"sid": 186587086411873,
+							"behaviorType": "8Direction"
+						}
+					],
+					"actions": [],
+					"sid": 603151943731455
 				}
 			],
 			"sid": 656644135996863
