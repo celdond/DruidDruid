@@ -293,7 +293,7 @@
 				{
 					"id": "create-object",
 					"objectClass": "System",
-					"sid": 320770218012355,
+					"sid": 588584088970960,
 					"parameters": {
 						"object-to-create": "Game_Over_Temp",
 						"layer": "0",
@@ -306,13 +306,51 @@
 				{
 					"id": "set-time-scale",
 					"objectClass": "System",
-					"sid": 189698151120037,
+					"sid": 899503196651352,
 					"parameters": {
 						"time-scale": "0"
 					}
 				}
 			],
 			"sid": 571868521002975
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-time",
+					"objectClass": "System",
+					"sid": 579116890082230,
+					"parameters": {
+						"comparison": 0,
+						"time-seconds": "10"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "create-object",
+					"objectClass": "System",
+					"sid": 411881000500837,
+					"parameters": {
+						"object-to-create": "Game_Over_Temp",
+						"layer": "0",
+						"x": "Player.X",
+						"y": "Player.Y",
+						"create-hierarchy": false,
+						"template-name": "\"\""
+					}
+				},
+				{
+					"id": "set-time-scale",
+					"objectClass": "System",
+					"sid": 445331887770986,
+					"parameters": {
+						"time-scale": "0"
+					}
+				}
+			],
+			"sid": 157233534429078
 		}
 	],
 	"sid": 787248142491917
