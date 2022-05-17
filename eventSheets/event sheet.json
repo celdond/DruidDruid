@@ -2,6 +2,16 @@
 	"name": "Event Sheet",
 	"events": [
 		{
+			"eventType": "variable",
+			"name": "Turn",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "Turn counter for game ticks",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 658723101406169
+		},
+		{
 			"eventType": "group",
 			"disabled": false,
 			"title": "Player",
@@ -236,6 +246,15 @@
 							"parameters": {
 								"layout": "MainHub"
 							}
+						},
+						{
+							"id": "add-to-eventvar",
+							"objectClass": "System",
+							"sid": 790290977779595,
+							"parameters": {
+								"variable": "Turn",
+								"value": "1"
+							}
 						}
 					],
 					"sid": 218005282798718
@@ -255,6 +274,45 @@
 				}
 			],
 			"sid": 656644135996863
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 758075780285172,
+					"parameters": {
+						"variable": "Turn",
+						"comparison": 0,
+						"value": "10"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "create-object",
+					"objectClass": "System",
+					"sid": 320770218012355,
+					"parameters": {
+						"object-to-create": "Game_Over_Temp",
+						"layer": "0",
+						"x": "Player.X",
+						"y": "Player.Y",
+						"create-hierarchy": false,
+						"template-name": "\"\""
+					}
+				},
+				{
+					"id": "set-time-scale",
+					"objectClass": "System",
+					"sid": 189698151120037,
+					"parameters": {
+						"time-scale": "0"
+					}
+				}
+			],
+			"sid": 571868521002975
 		}
 	],
 	"sid": 787248142491917

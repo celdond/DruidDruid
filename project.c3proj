@@ -55,7 +55,8 @@
 			"NewArea1Teleport",
 			"MainHubTeleport",
 			"NewArea2Teleport",
-			"NewArea3Teleport"
+			"NewArea3Teleport",
+			"Game_Over_Temp"
 		],
 		"subfolders": []
 	},
