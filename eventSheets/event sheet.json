@@ -5,7 +5,7 @@
 			"eventType": "variable",
 			"name": "Area3Degradation",
 			"type": "number",
-			"initialValue": "0",
+			"initialValue": "1",
 			"comment": "Degradation Level for NewArea3",
 			"isStatic": false,
 			"isConstant": false,
@@ -15,7 +15,7 @@
 			"eventType": "variable",
 			"name": "Area2Degradation",
 			"type": "number",
-			"initialValue": "0",
+			"initialValue": "1",
 			"comment": "Degradation Level for NewArea2",
 			"isStatic": false,
 			"isConstant": false,
@@ -25,7 +25,7 @@
 			"eventType": "variable",
 			"name": "Area1Degradation",
 			"type": "number",
-			"initialValue": "0",
+			"initialValue": "1",
 			"comment": "Degradation level for NewArea1",
 			"isStatic": false,
 			"isConstant": false,
@@ -419,11 +419,11 @@
 				{
 					"id": "compare-eventvar",
 					"objectClass": "System",
-					"sid": 848742362595999,
+					"sid": 153324730460674,
 					"parameters": {
 						"variable": "Area1Degradation",
 						"comparison": 0,
-						"value": "3"
+						"value": "4"
 					}
 				}
 			],
@@ -442,11 +442,11 @@
 				{
 					"id": "compare-eventvar",
 					"objectClass": "System",
-					"sid": 196776773586223,
+					"sid": 656172989790728,
 					"parameters": {
 						"variable": "Area2Degradation",
 						"comparison": 0,
-						"value": "3"
+						"value": "4"
 					}
 				}
 			],
@@ -465,11 +465,11 @@
 				{
 					"id": "compare-eventvar",
 					"objectClass": "System",
-					"sid": 503775922834063,
+					"sid": 980735508419699,
 					"parameters": {
 						"variable": "Area3Degradation",
 						"comparison": 0,
-						"value": "3"
+						"value": "4"
 					}
 				}
 			],
@@ -481,6 +481,30 @@
 				}
 			],
 			"sid": 664466877826993
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "every-tick",
+					"objectClass": "System",
+					"sid": 624095210088258
+				}
+			],
+			"actions": [
+				{
+					"id": "move-to-object",
+					"objectClass": "OilEnemy",
+					"sid": 916348415322588,
+					"behaviorType": "MoveTo",
+					"parameters": {
+						"object": "Player",
+						"image-point": "0",
+						"mode": "direct"
+					}
+				}
+			],
+			"sid": 474092296559758
 		}
 	],
 	"sid": 787248142491917

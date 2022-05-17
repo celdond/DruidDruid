@@ -45,6 +45,14 @@
 			"author": "Scirra",
 			"version": "r293.3",
 			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "MoveTo",
+			"name": "Move To",
+			"author": "Scirra",
+			"version": "r293.3",
+			"bundled": false
 		}
 	],
 	"uniqueId": "lwoeto5yg1y",
@@ -56,7 +64,9 @@
 			"MainHubTeleport",
 			"NewArea2Teleport",
 			"NewArea3Teleport",
-			"Game_Over_Temp"
+			"Game_Over_Temp",
+			"OilEnemy",
+			"ToxicEnemy"
 		],
 		"subfolders": []
 	},
