@@ -3,6 +3,36 @@
 	"events": [
 		{
 			"eventType": "variable",
+			"name": "Area3Degradation",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "Degradation Level for NewArea3",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 460312115873768
+		},
+		{
+			"eventType": "variable",
+			"name": "Area2Degradation",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "Degradation Level for NewArea2",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 579819680401213
+		},
+		{
+			"eventType": "variable",
+			"name": "Area1Degradation",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "Degradation level for NewArea1",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 605977087123966
+		},
+		{
+			"eventType": "variable",
 			"name": "Turn",
 			"type": "number",
 			"initialValue": "0",
@@ -167,6 +197,24 @@
 					"parameters": {
 						"layout": "NewArea1"
 					}
+				},
+				{
+					"id": "add-to-eventvar",
+					"objectClass": "System",
+					"sid": 879410328521784,
+					"parameters": {
+						"variable": "Area2Degradation",
+						"value": "1"
+					}
+				},
+				{
+					"id": "add-to-eventvar",
+					"objectClass": "System",
+					"sid": 551435319032952,
+					"parameters": {
+						"variable": "Area3Degradation",
+						"value": "1"
+					}
 				}
 			],
 			"sid": 164449996945983
@@ -191,6 +239,24 @@
 					"parameters": {
 						"layout": "NewArea2"
 					}
+				},
+				{
+					"id": "add-to-eventvar",
+					"objectClass": "System",
+					"sid": 265771035287505,
+					"parameters": {
+						"variable": "Area1Degradation",
+						"value": "1"
+					}
+				},
+				{
+					"id": "add-to-eventvar",
+					"objectClass": "System",
+					"sid": 179541168257915,
+					"parameters": {
+						"variable": "Area3Degradation",
+						"value": "1"
+					}
 				}
 			],
 			"sid": 982097258394185
@@ -214,6 +280,24 @@
 					"sid": 871159571575809,
 					"parameters": {
 						"layout": "NewArea3"
+					}
+				},
+				{
+					"id": "add-to-eventvar",
+					"objectClass": "System",
+					"sid": 954390698751437,
+					"parameters": {
+						"variable": "Area1Degradation",
+						"value": "1"
+					}
+				},
+				{
+					"id": "add-to-eventvar",
+					"objectClass": "System",
+					"sid": 606971817428397,
+					"parameters": {
+						"variable": "Area2Degradation",
+						"value": "1"
 					}
 				}
 			],
@@ -328,6 +412,75 @@
 				}
 			],
 			"sid": 157233534429078
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 848742362595999,
+					"parameters": {
+						"variable": "Area1Degradation",
+						"comparison": 0,
+						"value": "3"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "destroy",
+					"objectClass": "NewArea1Teleport",
+					"sid": 827344528368137
+				}
+			],
+			"sid": 312840270469433
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 196776773586223,
+					"parameters": {
+						"variable": "Area2Degradation",
+						"comparison": 0,
+						"value": "3"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "destroy",
+					"objectClass": "NewArea2Teleport",
+					"sid": 902532019340160
+				}
+			],
+			"sid": 480086725088461
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 503775922834063,
+					"parameters": {
+						"variable": "Area3Degradation",
+						"comparison": 0,
+						"value": "3"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "destroy",
+					"objectClass": "NewArea3Teleport",
+					"sid": 336761369971738
+				}
+			],
+			"sid": 664466877826993
 		}
 	],
 	"sid": 787248142491917
