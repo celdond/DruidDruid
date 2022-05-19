@@ -87,7 +87,8 @@
 	},
 	"eventSheets": {
 		"items": [
-			"Event Sheet"
+			"Event Sheet",
+			"EnemySheet"
 		],
 		"subfolders": []
 	},

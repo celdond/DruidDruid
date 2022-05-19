@@ -16,7 +16,9 @@
 						"live-preview": false
 					},
 					"uid": 2,
-					"instanceVariables": {},
+					"instanceVariables": {
+						"Health": 100
+					},
 					"behaviors": {
 						"BoundToLayout": {
 							"properties": {

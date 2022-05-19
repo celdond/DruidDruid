@@ -1,0 +1,44 @@
+{
+	"name": "EnemySheet",
+	"events": [
+		{
+			"eventType": "include",
+			"includeSheet": "Event Sheet"
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 299436831019102
+				},
+				{
+					"id": "repeat",
+					"objectClass": "System",
+					"sid": 994715884027449,
+					"parameters": {
+						"count": "10 * Area1Degradation"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "create-object",
+					"objectClass": "System",
+					"sid": 951363812549939,
+					"parameters": {
+						"object-to-create": "OilEnemy",
+						"layer": "0",
+						"x": "random(LayoutWidth)",
+						"y": "random(LayoutHeight)",
+						"create-hierarchy": false,
+						"template-name": "\"\""
+					}
+				}
+			],
+			"sid": 912442178801724
+		}
+	],
+	"sid": 583782141291131
+}

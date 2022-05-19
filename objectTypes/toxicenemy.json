@@ -3,7 +3,20 @@
 	"plugin-id": "Sprite",
 	"sid": 241996929912709,
 	"isGlobal": false,
-	"instanceVariables": [],
+	"instanceVariables": [
+		{
+			"name": "Health",
+			"type": "number",
+			"desc": "Toxic Enemy Health",
+			"sid": 831387609387907
+		},
+		{
+			"name": "Damage",
+			"type": "number",
+			"desc": "Toxic Enemy Damage",
+			"sid": 204295249964107
+		}
+	],
 	"behaviorTypes": [],
 	"effectTypes": [],
 	"animations": {

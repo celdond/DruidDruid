@@ -3,7 +3,20 @@
 	"plugin-id": "Sprite",
 	"sid": 852466752382797,
 	"isGlobal": false,
-	"instanceVariables": [],
+	"instanceVariables": [
+		{
+			"name": "Health",
+			"type": "number",
+			"desc": "Oil Enemy Health",
+			"sid": 412030886032230
+		},
+		{
+			"name": "Damage",
+			"type": "number",
+			"desc": "Oil Enemy Damage",
+			"sid": 467123826162368
+		}
+	],
 	"behaviorTypes": [
 		{
 			"behaviorId": "MoveTo",
