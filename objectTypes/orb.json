@@ -1,0 +1,48 @@
+{
+	"name": "Orb",
+	"plugin-id": "Sprite",
+	"sid": 908961192583962,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "destroy",
+			"name": "DestroyOutsideLayout",
+			"sid": 512441068782892
+		},
+		{
+			"behaviorId": "Bullet",
+			"name": "Bullet",
+			"sid": 732652250100946
+		}
+	],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 250,
+						"height": 250,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 109711,
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 194498288808452,
+				"name": "Animation 1",
+				"isLooping": true,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 15
+			}
+		],
+		"subfolders": []
+	}
+}
