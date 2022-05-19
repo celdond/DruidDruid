@@ -6,20 +6,10 @@
 			"name": "NumEnemies",
 			"type": "number",
 			"initialValue": "0",
-			"comment": "",
+			"comment": "FOR DEBUG",
 			"isStatic": false,
 			"isConstant": false,
 			"sid": 271951555875029
-		},
-		{
-			"eventType": "variable",
-			"name": "Spawning",
-			"type": "boolean",
-			"initialValue": "false",
-			"comment": "",
-			"isStatic": false,
-			"isConstant": false,
-			"sid": 953634616833565
 		},
 		{
 			"eventType": "include",
@@ -76,19 +66,10 @@
 				{
 					"id": "set-eventvar-value",
 					"objectClass": "System",
-					"sid": 398171312275989,
+					"sid": 741898421775512,
 					"parameters": {
 						"variable": "NumEnemies",
-						"value": "((Area1Degradation * InArea1) + (Area2Degradation * InArea2) + (Area3Degradation * InArea3)) * 10"
-					}
-				},
-				{
-					"id": "set-boolean-eventvar",
-					"objectClass": "System",
-					"sid": 841845349101164,
-					"parameters": {
-						"variable": "Spawning",
-						"value": "true"
+						"value": "CurrentDegredationLevel * 10"
 					}
 				}
 			],
@@ -105,9 +86,9 @@
 				{
 					"id": "repeat",
 					"objectClass": "System",
-					"sid": 510126362394928,
+					"sid": 494648313207295,
 					"parameters": {
-						"count": "((Area1Degradation * InArea1) + (Area2Degradation * InArea2) + (Area3Degradation * InArea3)) * 10"
+						"count": "CurrentDegredationLevel * 10"
 					}
 				}
 			],
@@ -127,28 +108,10 @@
 				},
 				{
 					"type": "script",
-					"script": ""
+					"script": "console.log('spawning')"
 				}
 			],
-			"sid": 439746720497895,
-			"children": [
-				{
-					"eventType": "block",
-					"conditions": [],
-					"actions": [
-						{
-							"id": "set-boolean-eventvar",
-							"objectClass": "System",
-							"sid": 270237727364187,
-							"parameters": {
-								"variable": "Spawning",
-								"value": "false"
-							}
-						}
-					],
-					"sid": 825118586573618
-				}
-			]
+			"sid": 439746720497895
 		},
 		{
 			"eventType": "block",

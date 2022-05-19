@@ -43,33 +43,13 @@
 		},
 		{
 			"eventType": "variable",
-			"name": "InArea1",
+			"name": "CurrentDegredationLevel",
 			"type": "number",
 			"initialValue": "0",
-			"comment": "",
+			"comment": "Degradation Level of Area Player Is In",
 			"isStatic": false,
 			"isConstant": false,
-			"sid": 581300655386398
-		},
-		{
-			"eventType": "variable",
-			"name": "InArea2",
-			"type": "number",
-			"initialValue": "0",
-			"comment": "",
-			"isStatic": false,
-			"isConstant": false,
-			"sid": 730017635005449
-		},
-		{
-			"eventType": "variable",
-			"name": "InArea3",
-			"type": "number",
-			"initialValue": "0",
-			"comment": "",
-			"isStatic": false,
-			"isConstant": false,
-			"sid": 465488718009239
+			"sid": 843735578433949
 		},
 		{
 			"eventType": "block",
@@ -249,9 +229,18 @@
 				{
 					"id": "set-eventvar-value",
 					"objectClass": "System",
-					"sid": 587475161336489,
+					"sid": 393491062890753,
 					"parameters": {
-						"variable": "InArea1",
+						"variable": "CurrentDegredationLevel",
+						"value": "Area1Degradation"
+					}
+				},
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 919419406063520,
+					"parameters": {
+						"variable": "Area1Degradation",
 						"value": "1"
 					}
 				}
@@ -300,9 +289,18 @@
 				{
 					"id": "set-eventvar-value",
 					"objectClass": "System",
-					"sid": 135868416182544,
+					"sid": 585388362787435,
 					"parameters": {
-						"variable": "InArea2",
+						"variable": "CurrentDegredationLevel",
+						"value": "Area2Degradation"
+					}
+				},
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 804284603087662,
+					"parameters": {
+						"variable": "Area2Degradation",
 						"value": "1"
 					}
 				}
@@ -351,9 +349,18 @@
 				{
 					"id": "set-eventvar-value",
 					"objectClass": "System",
-					"sid": 164715828145135,
+					"sid": 703637317818751,
 					"parameters": {
-						"variable": "InArea3",
+						"variable": "CurrentDegredationLevel",
+						"value": "Area3Degradation"
+					}
+				},
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 408147800765860,
+					"parameters": {
+						"variable": "Area3Degradation",
 						"value": "1"
 					}
 				}
@@ -388,33 +395,6 @@
 					"parameters": {
 						"variable": "Turn",
 						"value": "1"
-					}
-				},
-				{
-					"id": "set-eventvar-value",
-					"objectClass": "System",
-					"sid": 861827970889188,
-					"parameters": {
-						"variable": "InArea1",
-						"value": "0"
-					}
-				},
-				{
-					"id": "set-eventvar-value",
-					"objectClass": "System",
-					"sid": 144525974783511,
-					"parameters": {
-						"variable": "InArea2",
-						"value": "0"
-					}
-				},
-				{
-					"id": "set-eventvar-value",
-					"objectClass": "System",
-					"sid": 544535951103884,
-					"parameters": {
-						"variable": "InArea3",
-						"value": "0"
 					}
 				}
 			],
