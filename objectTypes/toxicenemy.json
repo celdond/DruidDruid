@@ -1,23 +1,29 @@
 {
 	"name": "ToxicEnemy",
 	"plugin-id": "Sprite",
-	"sid": 241996929912709,
+	"sid": 507592087019835,
 	"isGlobal": false,
 	"instanceVariables": [
 		{
 			"name": "Health",
 			"type": "number",
-			"desc": "Toxic Enemy Health",
-			"sid": 831387609387907
+			"desc": "Oil Enemy Health",
+			"sid": 289540796591099
 		},
 		{
 			"name": "Damage",
 			"type": "number",
-			"desc": "Toxic Enemy Damage",
-			"sid": 204295249964107
+			"desc": "Oil Enemy Damage",
+			"sid": 780054162617887
 		}
 	],
-	"behaviorTypes": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "MoveTo",
+			"name": "MoveTo",
+			"sid": 331525695870782
+		}
+	],
 	"effectTypes": [],
 	"animations": {
 		"items": [
@@ -31,12 +37,12 @@
 						"originalSource": "",
 						"exportFormat": "png",
 						"exportQuality": 0.8,
-						"imageSpriteId": 2552397,
+						"imageSpriteId": 255230,
 						"useCollisionPoly": true,
 						"duration": 1
 					}
 				],
-				"sid": 656474837072906,
+				"sid": 110796072767441,
 				"name": "Animation 1",
 				"isLooping": false,
 				"isPingPong": false,

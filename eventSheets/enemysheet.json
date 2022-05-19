@@ -2,6 +2,26 @@
 	"name": "EnemySheet",
 	"events": [
 		{
+			"eventType": "variable",
+			"name": "NumEnemies",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 271951555875029
+		},
+		{
+			"eventType": "variable",
+			"name": "Spawning",
+			"type": "boolean",
+			"initialValue": "false",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 953634616833565
+		},
+		{
 			"eventType": "include",
 			"includeSheet": "Event Sheet"
 		},
@@ -11,33 +31,284 @@
 				{
 					"id": "on-start-of-layout",
 					"objectClass": "System",
-					"sid": 299436831019102
+					"sid": 873348624727929
+				}
+			],
+			"actions": [
+				{
+					"id": "clear",
+					"objectClass": "EnemyArray",
+					"sid": 221570362807113,
+					"parameters": {
+						"value": "0"
+					}
+				},
+				{
+					"id": "set-size",
+					"objectClass": "EnemyArray",
+					"sid": 214806349205953,
+					"parameters": {
+						"width": "2",
+						"height": "1",
+						"depth": "1"
+					}
+				},
+				{
+					"id": "push",
+					"objectClass": "EnemyArray",
+					"sid": 111631046897945,
+					"parameters": {
+						"where": "front",
+						"value": "\"OilEnemy\"",
+						"axis": "x"
+					}
+				},
+				{
+					"id": "push",
+					"objectClass": "EnemyArray",
+					"sid": 285935027991764,
+					"parameters": {
+						"where": "front",
+						"value": "\"ToxicEnemy\"",
+						"axis": "x"
+					}
+				},
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 398171312275989,
+					"parameters": {
+						"variable": "NumEnemies",
+						"value": "((Area1Degradation * InArea1) + (Area2Degradation * InArea2) + (Area3Degradation * InArea3)) * 10"
+					}
+				},
+				{
+					"id": "set-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 841845349101164,
+					"parameters": {
+						"variable": "Spawning",
+						"value": "true"
+					}
+				}
+			],
+			"sid": 553759790655599
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 593750805037190
 				},
 				{
 					"id": "repeat",
 					"objectClass": "System",
-					"sid": 994715884027449,
+					"sid": 510126362394928,
 					"parameters": {
-						"count": "10 * Area1Degradation"
+						"count": "((Area1Degradation * InArea1) + (Area2Degradation * InArea2) + (Area3Degradation * InArea3)) * 10"
 					}
 				}
 			],
 			"actions": [
 				{
-					"id": "create-object",
+					"id": "create-object-by-name",
 					"objectClass": "System",
-					"sid": 951363812549939,
+					"sid": 394880921236904,
 					"parameters": {
-						"object-to-create": "OilEnemy",
+						"object-name": "EnemyArray.At(random(EnemyArray.Width - 2))",
 						"layer": "0",
 						"x": "random(LayoutWidth)",
 						"y": "random(LayoutHeight)",
 						"create-hierarchy": false,
 						"template-name": "\"\""
 					}
+				},
+				{
+					"type": "script",
+					"script": ""
 				}
 			],
-			"sid": 912442178801724
+			"sid": 439746720497895,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [],
+					"actions": [
+						{
+							"id": "set-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 270237727364187,
+							"parameters": {
+								"variable": "Spawning",
+								"value": "false"
+							}
+						}
+					],
+					"sid": 825118586573618
+				}
+			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "every-tick",
+					"objectClass": "System",
+					"sid": 624095210088258
+				}
+			],
+			"actions": [
+				{
+					"id": "move-to-object",
+					"objectClass": "OilEnemy",
+					"sid": 916348415322588,
+					"behaviorType": "MoveTo",
+					"parameters": {
+						"object": "Player",
+						"image-point": "0",
+						"mode": "direct"
+					}
+				},
+				{
+					"id": "move-to-object",
+					"objectClass": "ToxicEnemy",
+					"sid": 355884449844141,
+					"behaviorType": "MoveTo",
+					"parameters": {
+						"object": "Player",
+						"image-point": "0",
+						"mode": "direct"
+					}
+				}
+			],
+			"sid": 474092296559758
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-collision-with-another-object",
+					"objectClass": "OilEnemy",
+					"sid": 919546740093743,
+					"parameters": {
+						"object": "Player"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "subtract-from-instvar",
+					"objectClass": "Player",
+					"sid": 532607857212472,
+					"parameters": {
+						"instance-variable": "Health",
+						"value": "OilEnemy.Damage"
+					}
+				},
+				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 903858044512690,
+					"parameters": {
+						"seconds": "1.0"
+					}
+				}
+			],
+			"sid": 954663831865579
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-collision-with-another-object",
+					"objectClass": "ToxicEnemy",
+					"sid": 306320750069908,
+					"parameters": {
+						"object": "Player"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "subtract-from-instvar",
+					"objectClass": "Player",
+					"sid": 688069714214572,
+					"parameters": {
+						"instance-variable": "Health",
+						"value": "ToxicEnemy.Damage"
+					}
+				},
+				{
+					"id": "destroy",
+					"objectClass": "ToxicEnemy",
+					"sid": 586198311965926
+				}
+			],
+			"sid": 303084562178469
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-created",
+					"objectClass": "OilEnemy",
+					"sid": 404289383929290
+				}
+			],
+			"actions": [
+				{
+					"id": "set-instvar-value",
+					"objectClass": "OilEnemy",
+					"sid": 241407240320646,
+					"parameters": {
+						"instance-variable": "Damage",
+						"value": "10"
+					}
+				},
+				{
+					"id": "set-instvar-value",
+					"objectClass": "OilEnemy",
+					"sid": 126290102614856,
+					"parameters": {
+						"instance-variable": "Health",
+						"value": "100"
+					}
+				}
+			],
+			"sid": 912484906444137
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-created",
+					"objectClass": "ToxicEnemy",
+					"sid": 439855601658402
+				}
+			],
+			"actions": [
+				{
+					"id": "set-instvar-value",
+					"objectClass": "ToxicEnemy",
+					"sid": 159620468617663,
+					"parameters": {
+						"instance-variable": "Damage",
+						"value": "20"
+					}
+				},
+				{
+					"id": "set-instvar-value",
+					"objectClass": "ToxicEnemy",
+					"sid": 982543065526961,
+					"parameters": {
+						"instance-variable": "Health",
+						"value": "100"
+					}
+				}
+			],
+			"sid": 692409004357021
 		}
 	],
 	"sid": 583782141291131

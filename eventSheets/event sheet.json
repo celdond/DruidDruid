@@ -3,13 +3,13 @@
 	"events": [
 		{
 			"eventType": "variable",
-			"name": "Area3Degradation",
+			"name": "Area1Degradation",
 			"type": "number",
 			"initialValue": "1",
-			"comment": "Degradation Level for NewArea3",
+			"comment": "Degradation level for NewArea1",
 			"isStatic": false,
 			"isConstant": false,
-			"sid": 460312115873768
+			"sid": 518860557971934
 		},
 		{
 			"eventType": "variable",
@@ -23,13 +23,13 @@
 		},
 		{
 			"eventType": "variable",
-			"name": "Area1Degradation",
+			"name": "Area3Degradation",
 			"type": "number",
 			"initialValue": "1",
-			"comment": "Degradation level for NewArea1",
+			"comment": "Degradation Level for NewArea3",
 			"isStatic": false,
 			"isConstant": false,
-			"sid": 605977087123966
+			"sid": 400323257564612
 		},
 		{
 			"eventType": "variable",
@@ -40,6 +40,36 @@
 			"isStatic": false,
 			"isConstant": false,
 			"sid": 658723101406169
+		},
+		{
+			"eventType": "variable",
+			"name": "InArea1",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 581300655386398
+		},
+		{
+			"eventType": "variable",
+			"name": "InArea2",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 730017635005449
+		},
+		{
+			"eventType": "variable",
+			"name": "InArea3",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 465488718009239
 		},
 		{
 			"eventType": "block",
@@ -215,6 +245,15 @@
 						"variable": "Area3Degradation",
 						"value": "1"
 					}
+				},
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 587475161336489,
+					"parameters": {
+						"variable": "InArea1",
+						"value": "1"
+					}
 				}
 			],
 			"sid": 164449996945983
@@ -255,6 +294,15 @@
 					"sid": 179541168257915,
 					"parameters": {
 						"variable": "Area3Degradation",
+						"value": "1"
+					}
+				},
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 135868416182544,
+					"parameters": {
+						"variable": "InArea2",
 						"value": "1"
 					}
 				}
@@ -299,6 +347,15 @@
 						"variable": "Area2Degradation",
 						"value": "1"
 					}
+				},
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 164715828145135,
+					"parameters": {
+						"variable": "InArea3",
+						"value": "1"
+					}
 				}
 			],
 			"sid": 355126499781896
@@ -332,6 +389,33 @@
 						"variable": "Turn",
 						"value": "1"
 					}
+				},
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 861827970889188,
+					"parameters": {
+						"variable": "InArea1",
+						"value": "0"
+					}
+				},
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 144525974783511,
+					"parameters": {
+						"variable": "InArea2",
+						"value": "0"
+					}
+				},
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 544535951103884,
+					"parameters": {
+						"variable": "InArea3",
+						"value": "0"
+					}
 				}
 			],
 			"sid": 965959287544369
@@ -347,6 +431,25 @@
 						"variable": "Turn",
 						"comparison": 0,
 						"value": "10"
+					}
+				},
+				{
+					"id": "compare-time",
+					"objectClass": "System",
+					"sid": 599304703437051,
+					"parameters": {
+						"comparison": 0,
+						"time-seconds": "100"
+					}
+				},
+				{
+					"id": "compare-two-values",
+					"objectClass": "System",
+					"sid": 115748027321027,
+					"parameters": {
+						"first-value": "Player.Health",
+						"comparison": 3,
+						"second-value": "0"
 					}
 				}
 			],
@@ -373,45 +476,8 @@
 					}
 				}
 			],
-			"sid": 571868521002975
-		},
-		{
-			"eventType": "block",
-			"conditions": [
-				{
-					"id": "compare-time",
-					"objectClass": "System",
-					"sid": 723289572887322,
-					"parameters": {
-						"comparison": 0,
-						"time-seconds": "100"
-					}
-				}
-			],
-			"actions": [
-				{
-					"id": "create-object",
-					"objectClass": "System",
-					"sid": 411881000500837,
-					"parameters": {
-						"object-to-create": "Game_Over_Temp",
-						"layer": "0",
-						"x": "Player.X",
-						"y": "Player.Y",
-						"create-hierarchy": false,
-						"template-name": "\"\""
-					}
-				},
-				{
-					"id": "set-time-scale",
-					"objectClass": "System",
-					"sid": 445331887770986,
-					"parameters": {
-						"time-scale": "0"
-					}
-				}
-			],
-			"sid": 157233534429078
+			"sid": 571868521002975,
+			"isOrBlock": true
 		},
 		{
 			"eventType": "block",
@@ -481,30 +547,6 @@
 				}
 			],
 			"sid": 664466877826993
-		},
-		{
-			"eventType": "block",
-			"conditions": [
-				{
-					"id": "every-tick",
-					"objectClass": "System",
-					"sid": 624095210088258
-				}
-			],
-			"actions": [
-				{
-					"id": "move-to-object",
-					"objectClass": "OilEnemy",
-					"sid": 916348415322588,
-					"behaviorType": "MoveTo",
-					"parameters": {
-						"object": "Player",
-						"image-point": "0",
-						"mode": "direct"
-					}
-				}
-			],
-			"sid": 474092296559758
 		}
 	],
 	"sid": 787248142491917

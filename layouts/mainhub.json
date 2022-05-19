@@ -40,6 +40,12 @@
 							"properties": {
 								"enabled": true
 							}
+						},
+						"Solid": {
+							"properties": {
+								"enabled": true,
+								"tags": ""
+							}
 						}
 					},
 					"world": {
@@ -177,7 +183,18 @@
 		}
 	],
 	"sid": 281379531293282,
-	"nonworld-instances": [],
+	"nonworld-instances": [
+		{
+			"type": "EnemyArray",
+			"properties": {
+				"width": 2,
+				"height": 1,
+				"depth": 1
+			},
+			"uid": 6,
+			"instanceVariables": {}
+		}
+	],
 	"effectTypes": [],
 	"width": 1708,
 	"height": 960,
