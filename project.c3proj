@@ -111,9 +111,7 @@
 			"Orb",
 			"Sprite",
 			"Mouse",
-			"1Pad",
-			"2Pad",
-			"3Pad"
+			"Pad"
 		],
 		"subfolders": []
 	},

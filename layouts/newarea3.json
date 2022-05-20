@@ -36,7 +36,7 @@
 					}
 				},
 				{
-					"type": "3Pad",
+					"type": "Pad",
 					"properties": {
 						"initially-visible": true,
 						"initial-animation": "Animation 1",
@@ -44,14 +44,14 @@
 						"enable-collisions": true,
 						"live-preview": false
 					},
-					"uid": 16,
+					"uid": 17,
 					"instanceVariables": {},
 					"behaviors": {},
 					"world": {
-						"x": 139,
-						"y": 283,
-						"width": 250,
-						"height": 250,
+						"x": 116,
+						"y": 286,
+						"width": 117.89169997119825,
+						"height": 117.89169997119825,
 						"originX": 0.5,
 						"originY": 0.5,
 						"color": [

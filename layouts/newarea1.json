@@ -36,7 +36,7 @@
 					}
 				},
 				{
-					"type": "1Pad",
+					"type": "Pad",
 					"properties": {
 						"initially-visible": true,
 						"initial-animation": "Animation 1",
@@ -48,10 +48,10 @@
 					"instanceVariables": {},
 					"behaviors": {},
 					"world": {
-						"x": 1532,
-						"y": 365,
-						"width": 250,
-						"height": 250,
+						"x": 1531,
+						"y": 391,
+						"width": 161.47755261955143,
+						"height": 161.47755261955143,
 						"originX": 0.5,
 						"originY": 0.5,
 						"color": [

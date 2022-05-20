@@ -335,6 +335,15 @@
 						"variable": "Area1Degradation",
 						"value": "1"
 					}
+				},
+				{
+					"id": "set-position",
+					"objectClass": "Player",
+					"sid": 510558755098846,
+					"parameters": {
+						"x": "Pad.X",
+						"y": "Pad.Y"
+					}
 				}
 			],
 			"sid": 164449996945983

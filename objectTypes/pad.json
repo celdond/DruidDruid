@@ -1,7 +1,7 @@
 {
-	"name": "2Pad",
+	"name": "Pad",
 	"plugin-id": "Sprite",
-	"sid": 752713236901714,
+	"sid": 968645186589872,
 	"isGlobal": false,
 	"instanceVariables": [],
 	"behaviorTypes": [],
@@ -18,12 +18,12 @@
 						"originalSource": "",
 						"exportFormat": "png",
 						"exportQuality": 0.8,
-						"imageSpriteId": 1456898,
+						"imageSpriteId": 7111862,
 						"useCollisionPoly": true,
 						"duration": 1
 					}
 				],
-				"sid": 890228657870966,
+				"sid": 356226467637575,
 				"name": "Animation 1",
 				"isLooping": false,
 				"isPingPong": false,

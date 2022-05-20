@@ -36,7 +36,7 @@
 					}
 				},
 				{
-					"type": "2Pad",
+					"type": "Pad",
 					"properties": {
 						"initially-visible": true,
 						"initial-animation": "Animation 1",
@@ -44,14 +44,14 @@
 						"enable-collisions": true,
 						"live-preview": false
 					},
-					"uid": 15,
+					"uid": 16,
 					"instanceVariables": {},
 					"behaviors": {},
 					"world": {
-						"x": 860,
-						"y": 299,
-						"width": 250,
-						"height": 250,
+						"x": 857,
+						"y": 307,
+						"width": 125.9069947089176,
+						"height": 125.9069947089176,
 						"originX": 0.5,
 						"originY": 0.5,
 						"color": [
