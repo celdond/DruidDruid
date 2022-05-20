@@ -150,7 +150,7 @@
 						},
 						"8Direction": {
 							"properties": {
-								"max-speed": 200,
+								"max-speed": 400,
 								"acceleration": 600,
 								"deceleration": 500,
 								"directions": "dir-8",
@@ -198,7 +198,9 @@
 						"live-preview": false
 					},
 					"uid": 8,
-					"instanceVariables": {},
+					"instanceVariables": {
+						"Damage": 100
+					},
 					"behaviors": {
 						"DestroyOutsideLayout": {
 							"properties": {}

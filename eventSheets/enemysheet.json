@@ -235,7 +235,7 @@
 				{
 					"id": "wait",
 					"objectClass": "System",
-					"sid": 903858044512690,
+					"sid": 821006397606453,
 					"parameters": {
 						"seconds": "1.0"
 					}
@@ -272,6 +272,52 @@
 				}
 			],
 			"sid": 303084562178469
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-instance-variable",
+					"objectClass": "ToxicEnemy",
+					"sid": 238917241162874,
+					"parameters": {
+						"instance-variable": "Health",
+						"comparison": 3,
+						"value": "0"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "destroy",
+					"objectClass": "ToxicEnemy",
+					"sid": 826118840280552
+				}
+			],
+			"sid": 912911386876374
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-instance-variable",
+					"objectClass": "OilEnemy",
+					"sid": 355604298787907,
+					"parameters": {
+						"instance-variable": "Health",
+						"comparison": 3,
+						"value": "0"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "destroy",
+					"objectClass": "OilEnemy",
+					"sid": 278702143297467
+				}
+			],
+			"sid": 309809505744184
 		}
 	],
 	"sid": 583782141291131

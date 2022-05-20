@@ -3,7 +3,14 @@
 	"plugin-id": "Sprite",
 	"sid": 908961192583962,
 	"isGlobal": false,
-	"instanceVariables": [],
+	"instanceVariables": [
+		{
+			"name": "Damage",
+			"type": "number",
+			"desc": "",
+			"sid": 216069232526142
+		}
+	],
 	"behaviorTypes": [
 		{
 			"behaviorId": "destroy",

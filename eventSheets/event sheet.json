@@ -229,6 +229,61 @@
 			"conditions": [
 				{
 					"id": "on-collision-with-another-object",
+					"objectClass": "Orb",
+					"sid": 242711405118771,
+					"parameters": {
+						"object": "ToxicEnemy"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "subtract-from-instvar",
+					"objectClass": "ToxicEnemy",
+					"sid": 116841821729996,
+					"parameters": {
+						"instance-variable": "Health",
+						"value": "Orb.Damage"
+					}
+				},
+				{
+					"id": "destroy",
+					"objectClass": "Orb",
+					"sid": 349367717642854
+				}
+			],
+			"sid": 791819755128983
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-collision-with-another-object",
+					"objectClass": "Orb",
+					"sid": 325747849989612,
+					"parameters": {
+						"object": "OilEnemy"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "subtract-from-instvar",
+					"objectClass": "OilEnemy",
+					"sid": 106760687677565,
+					"parameters": {
+						"instance-variable": "Health",
+						"value": "Orb.Damage"
+					}
+				}
+			],
+			"sid": 358481403951390
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-collision-with-another-object",
 					"objectClass": "Player",
 					"sid": 409739165826366,
 					"parameters": {
