@@ -628,6 +628,27 @@
 				}
 			],
 			"sid": 664466877826993
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "every-tick",
+					"objectClass": "System",
+					"sid": 798579109195903
+				}
+			],
+			"actions": [
+				{
+					"id": "set-progress",
+					"objectClass": "Health",
+					"sid": 682697394310439,
+					"parameters": {
+						"value": "Player.Health"
+					}
+				}
+			],
+			"sid": 468649991723100
 		}
 	],
 	"sid": 787248142491917

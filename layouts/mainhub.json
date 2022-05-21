@@ -7,7 +7,7 @@
 			"subLayers": [],
 			"instances": [
 				{
-					"type": "NewArea1Teleport",
+					"type": "Pad",
 					"properties": {
 						"initially-visible": true,
 						"initial-animation": "Animation 1",
@@ -15,16 +15,49 @@
 						"enable-collisions": true,
 						"live-preview": false
 					},
-					"uid": 4,
+					"uid": 15,
 					"instanceVariables": {},
 					"behaviors": {},
 					"world": {
-						"x": 424.5,
-						"y": 874,
-						"width": 155,
-						"height": 152,
+						"x": 848,
+						"y": 563,
+						"width": 159.2953232207399,
+						"height": 159.2953232207399,
 						"originX": 0.5,
 						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "TiledBackground",
+					"properties": {
+						"initially-visible": true,
+						"origin": "top-left",
+						"wrap-horizontal": "repeat",
+						"wrap-vertical": "repeat",
+						"image-offset-x": 0,
+						"image-offset-y": 0,
+						"image-scale-x": 1,
+						"image-scale-y": 1,
+						"image-angle": 0
+					},
+					"uid": 18,
+					"instanceVariables": {},
+					"behaviors": {},
+					"world": {
+						"x": 0,
+						"y": 0,
+						"width": 1708,
+						"height": 960,
+						"originX": 0,
+						"originY": 0,
 						"color": [
 							1,
 							1,
@@ -48,8 +81,8 @@
 					"instanceVariables": {},
 					"behaviors": {},
 					"world": {
-						"x": 793,
-						"y": 871,
+						"x": 838,
+						"y": 905,
 						"width": 157,
 						"height": 157,
 						"originX": 0.5,
@@ -61,11 +94,11 @@
 							1
 						],
 						"angle": 0,
-						"zElevation": 0
+						"zElevation": 1
 					}
 				},
 				{
-					"type": "NewArea3Teleport",
+					"type": "NewArea1Teleport",
 					"properties": {
 						"initially-visible": true,
 						"initial-animation": "Animation 1",
@@ -73,14 +106,14 @@
 						"enable-collisions": true,
 						"live-preview": false
 					},
-					"uid": 10,
+					"uid": 4,
 					"instanceVariables": {},
 					"behaviors": {},
 					"world": {
-						"x": 1199,
-						"y": 871,
-						"width": 158,
-						"height": 169,
+						"x": 135,
+						"y": 898,
+						"width": 155,
+						"height": 157.97200955718742,
 						"originX": 0.5,
 						"originY": 0.5,
 						"color": [
@@ -90,7 +123,7 @@
 							1
 						],
 						"angle": 0,
-						"zElevation": 0
+						"zElevation": 1
 					}
 				},
 				{
@@ -126,11 +159,11 @@
 							1
 						],
 						"angle": 0,
-						"zElevation": 0
+						"zElevation": 2
 					}
 				},
 				{
-					"type": "Pad",
+					"type": "NewArea3Teleport",
 					"properties": {
 						"initially-visible": true,
 						"initial-animation": "Animation 1",
@@ -138,14 +171,14 @@
 						"enable-collisions": true,
 						"live-preview": false
 					},
-					"uid": 15,
+					"uid": 10,
 					"instanceVariables": {},
 					"behaviors": {},
 					"world": {
-						"x": 848,
-						"y": 563,
-						"width": 159.2953232207399,
-						"height": 159.2953232207399,
+						"x": 1584,
+						"y": 891,
+						"width": 158,
+						"height": 169,
 						"originX": 0.5,
 						"originY": 0.5,
 						"color": [
@@ -155,7 +188,7 @@
 							1
 						],
 						"angle": 0,
-						"zElevation": 0
+						"zElevation": 3
 					}
 				},
 				{
@@ -291,6 +324,68 @@
 			"blendMode": "normal",
 			"zElevation": 0,
 			"global": false
+		},
+		{
+			"name": "UI",
+			"overriden": 0,
+			"subLayers": [],
+			"instances": [
+				{
+					"type": "Health",
+					"properties": {
+						"value": 0,
+						"maximum": 100,
+						"tooltip": "",
+						"initially-visible": true,
+						"id": "",
+						"class": ""
+					},
+					"uid": 22,
+					"instanceVariables": {},
+					"behaviors": {},
+					"world": {
+						"x": 63,
+						"y": 139,
+						"width": 200,
+						"height": 25,
+						"originX": 0,
+						"originY": 0,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						]
+					}
+				}
+			],
+			"sid": 275038582900232,
+			"effectTypes": [],
+			"isInitiallyVisible": true,
+			"isInitiallyInteractive": true,
+			"color": [
+				1,
+				1,
+				1,
+				1
+			],
+			"backgroundColor": [
+				0.3686274509803922,
+				0.3686274509803922,
+				0.3686274509803922,
+				1
+			],
+			"isTransparent": true,
+			"parallaxX": 1,
+			"parallaxY": 1,
+			"scaleRate": 1,
+			"forceOwnTexture": false,
+			"renderingMode": "3d",
+			"drawOrder": "z-order",
+			"useRenderCells": false,
+			"blendMode": "normal",
+			"zElevation": 0,
+			"global": true
 		}
 	],
 	"sid": 281379531293282,
