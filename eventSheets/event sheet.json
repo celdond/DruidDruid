@@ -204,10 +204,10 @@
 				{
 					"id": "spawn-another-object",
 					"objectClass": "Player",
-					"sid": 979831989579728,
+					"sid": 870658191939830,
 					"parameters": {
 						"object": "Orb",
-						"layer": "6",
+						"layer": "\"Layer 0\"",
 						"image-point": "1",
 						"create-hierarchy": false
 					}

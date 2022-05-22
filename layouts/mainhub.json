@@ -293,7 +293,7 @@
 							1
 						],
 						"angle": 0,
-						"zElevation": 7
+						"zElevation": 8
 					}
 				}
 			],
@@ -344,8 +344,8 @@
 					"instanceVariables": {},
 					"behaviors": {},
 					"world": {
-						"x": 63,
-						"y": 139,
+						"x": 25,
+						"y": 8,
 						"width": 200,
 						"height": 25,
 						"originX": 0,
@@ -376,15 +376,15 @@
 				1
 			],
 			"isTransparent": true,
-			"parallaxX": 1,
-			"parallaxY": 1,
+			"parallaxX": 0,
+			"parallaxY": 0,
 			"scaleRate": 1,
 			"forceOwnTexture": false,
 			"renderingMode": "3d",
 			"drawOrder": "z-order",
 			"useRenderCells": false,
 			"blendMode": "normal",
-			"zElevation": 0,
+			"zElevation": 20,
 			"global": true
 		}
 	],

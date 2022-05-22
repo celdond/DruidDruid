@@ -2,7 +2,7 @@
 	"name": "Orb",
 	"plugin-id": "Sprite",
 	"sid": 908961192583962,
-	"isGlobal": false,
+	"isGlobal": true,
 	"instanceVariables": [
 		{
 			"name": "Damage",
