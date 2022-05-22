@@ -55,6 +55,14 @@
 			"bundled": false
 		},
 		{
+			"type": "plugin",
+			"id": "Audio",
+			"name": "Audio",
+			"author": "Scirra",
+			"version": "r293.3",
+			"bundled": false
+		},
+		{
 			"type": "behavior",
 			"id": "bound",
 			"name": "Bound to layout",
@@ -129,7 +137,8 @@
 			"Mouse",
 			"Pad",
 			"TiledBackground",
-			"Health"
+			"Health",
+			"Audio"
 		],
 		"subfolders": []
 	},
@@ -165,7 +174,16 @@
 			"subfolders": []
 		},
 		"music": {
-			"items": [],
+			"items": [
+				{
+					"name": "spooky jungle boogie.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 914620318331921,
+					"file-info": {
+						"purpose": "none"
+					}
+				}
+			],
 			"subfolders": []
 		},
 		"video": {

@@ -649,6 +649,30 @@
 				}
 			],
 			"sid": 468649991723100
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 165404582699160
+				}
+			],
+			"actions": [
+				{
+					"id": "play",
+					"objectClass": "Audio",
+					"sid": 706391154916993,
+					"parameters": {
+						"audio-file": "spooky jungle boogie",
+						"loop": "looping",
+						"volume": "0",
+						"tag-optional": "\"\""
+					}
+				}
+			],
+			"sid": 508021426689528
 		}
 	],
 	"sid": 787248142491917
