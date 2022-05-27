@@ -9,6 +9,12 @@
 			"type": "number",
 			"desc": "Player Health",
 			"sid": 487654978620480
+		},
+		{
+			"name": "Invincible",
+			"type": "boolean",
+			"desc": "Invincibility time for player",
+			"sid": 166038256770614
 		}
 	],
 	"behaviorTypes": [

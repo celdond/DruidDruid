@@ -215,11 +215,20 @@
 			"conditions": [
 				{
 					"id": "on-collision-with-another-object",
-					"objectClass": "OilEnemy",
-					"sid": 919546740093743,
+					"objectClass": "Player",
+					"sid": 585227399739279,
 					"parameters": {
-						"object": "Player"
+						"object": "OilEnemy"
 					}
+				},
+				{
+					"id": "is-boolean-instance-variable-set",
+					"objectClass": "Player",
+					"sid": 666744126146023,
+					"parameters": {
+						"instance-variable": "Invincible"
+					},
+					"isInverted": true
 				}
 			],
 			"actions": [
@@ -233,11 +242,29 @@
 					}
 				},
 				{
+					"id": "set-boolean-instvar",
+					"objectClass": "Player",
+					"sid": 392748865272351,
+					"parameters": {
+						"instance-variable": "Invincible",
+						"value": "true"
+					}
+				},
+				{
 					"id": "wait",
 					"objectClass": "System",
-					"sid": 821006397606453,
+					"sid": 297889819662122,
 					"parameters": {
-						"seconds": "1.0"
+						"seconds": "1"
+					}
+				},
+				{
+					"id": "set-boolean-instvar",
+					"objectClass": "Player",
+					"sid": 113152719181612,
+					"parameters": {
+						"instance-variable": "Invincible",
+						"value": "false"
 					}
 				}
 			],
@@ -248,11 +275,20 @@
 			"conditions": [
 				{
 					"id": "on-collision-with-another-object",
-					"objectClass": "ToxicEnemy",
-					"sid": 306320750069908,
+					"objectClass": "Player",
+					"sid": 363272620094811,
 					"parameters": {
-						"object": "Player"
+						"object": "ToxicEnemy"
 					}
+				},
+				{
+					"id": "is-boolean-instance-variable-set",
+					"objectClass": "Player",
+					"sid": 259233869019478,
+					"parameters": {
+						"instance-variable": "Invincible"
+					},
+					"isInverted": true
 				}
 			],
 			"actions": [
@@ -269,6 +305,32 @@
 					"id": "destroy",
 					"objectClass": "ToxicEnemy",
 					"sid": 586198311965926
+				},
+				{
+					"id": "set-boolean-instvar",
+					"objectClass": "Player",
+					"sid": 173471834276893,
+					"parameters": {
+						"instance-variable": "Invincible",
+						"value": "true"
+					}
+				},
+				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 206678986079911,
+					"parameters": {
+						"seconds": "1"
+					}
+				},
+				{
+					"id": "set-boolean-instvar",
+					"objectClass": "Player",
+					"sid": 138173732915654,
+					"parameters": {
+						"instance-variable": "Invincible",
+						"value": "false"
+					}
 				}
 			],
 			"sid": 303084562178469
@@ -292,6 +354,15 @@
 					"id": "destroy",
 					"objectClass": "ToxicEnemy",
 					"sid": 826118840280552
+				},
+				{
+					"id": "subtract-from-eventvar",
+					"objectClass": "System",
+					"sid": 166036563430930,
+					"parameters": {
+						"variable": "NumEnemies",
+						"value": "1"
+					}
 				}
 			],
 			"sid": 912911386876374
@@ -315,6 +386,15 @@
 					"id": "destroy",
 					"objectClass": "OilEnemy",
 					"sid": 278702143297467
+				},
+				{
+					"id": "subtract-from-eventvar",
+					"objectClass": "System",
+					"sid": 464404414411635,
+					"parameters": {
+						"variable": "NumEnemies",
+						"value": "1"
+					}
 				}
 			],
 			"sid": 309809505744184
