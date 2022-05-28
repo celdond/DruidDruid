@@ -112,6 +112,14 @@
 		},
 		{
 			"type": "behavior",
+			"id": "LOS",
+			"name": "Line of sight",
+			"author": "Scirra",
+			"version": "r293.3",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
 			"id": "destroy",
 			"name": "Destroy outside layout",
 			"author": "Scirra",
@@ -173,7 +181,7 @@
 	"eventSheets": {
 		"items": [
 			"Event Sheet",
-			"EnemySheet"
+			"AreaSheet"
 		],
 		"subfolders": []
 	},

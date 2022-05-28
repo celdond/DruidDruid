@@ -33,16 +33,6 @@
 		},
 		{
 			"eventType": "variable",
-			"name": "Turn",
-			"type": "number",
-			"initialValue": "0",
-			"comment": "Turn counter for game ticks",
-			"isStatic": false,
-			"isConstant": false,
-			"sid": 658723101406169
-		},
-		{
-			"eventType": "variable",
 			"name": "CurrentDegredationLevel",
 			"type": "number",
 			"initialValue": "0",
@@ -50,6 +40,46 @@
 			"isStatic": false,
 			"isConstant": false,
 			"sid": 843735578433949
+		},
+		{
+			"eventType": "variable",
+			"name": "Score",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "Player Score",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 692085064348851
+		},
+		{
+			"eventType": "variable",
+			"name": "Area1Points",
+			"type": "number",
+			"initialValue": "3",
+			"comment": "Number of points for area 1 by end of game (3 if saved, 0 if destroyed)",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 291057405643967
+		},
+		{
+			"eventType": "variable",
+			"name": "Area2Points",
+			"type": "number",
+			"initialValue": "3",
+			"comment": "Number of points for area 2 by end of game (3 if saved, 0 if destroyed)",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 328242236759493
+		},
+		{
+			"eventType": "variable",
+			"name": "Area3Points",
+			"type": "number",
+			"initialValue": "3",
+			"comment": "Number of points for area 2 by end of game (3 if saved, 0 if destroyed)",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 928716769128075
 		},
 		{
 			"eventType": "block",
@@ -409,6 +439,15 @@
 						"variable": "Area2Degradation",
 						"value": "1"
 					}
+				},
+				{
+					"id": "set-position",
+					"objectClass": "Player",
+					"sid": 924288992842274,
+					"parameters": {
+						"x": "854",
+						"y": "250"
+					}
 				}
 			],
 			"sid": 982097258394185
@@ -469,6 +508,15 @@
 						"variable": "Area3Degradation",
 						"value": "1"
 					}
+				},
+				{
+					"id": "set-position",
+					"objectClass": "Player",
+					"sid": 121306884971944,
+					"parameters": {
+						"x": "285",
+						"y": "246"
+					}
 				}
 			],
 			"sid": 355126499781896
@@ -495,15 +543,6 @@
 					}
 				},
 				{
-					"id": "add-to-eventvar",
-					"objectClass": "System",
-					"sid": 842133105303733,
-					"parameters": {
-						"variable": "Turn",
-						"value": "1"
-					}
-				},
-				{
 					"id": "set-instvar-value",
 					"objectClass": "Player",
 					"sid": 863145518474356,
@@ -511,6 +550,20 @@
 						"instance-variable": "Health",
 						"value": "100"
 					}
+				},
+				{
+					"id": "set-position",
+					"objectClass": "Player",
+					"sid": 177986038112455,
+					"parameters": {
+						"x": "859",
+						"y": "509"
+					}
+				},
+				{
+					"id": "destroy",
+					"objectClass": "Orb",
+					"sid": 707631334078801
 				}
 			],
 			"sid": 965959287544369
@@ -519,22 +572,12 @@
 			"eventType": "block",
 			"conditions": [
 				{
-					"id": "compare-eventvar",
-					"objectClass": "System",
-					"sid": 758075780285172,
-					"parameters": {
-						"variable": "Turn",
-						"comparison": 0,
-						"value": "10"
-					}
-				},
-				{
 					"id": "compare-time",
 					"objectClass": "System",
-					"sid": 599304703437051,
+					"sid": 249974078812381,
 					"parameters": {
 						"comparison": 0,
-						"time-seconds": "100"
+						"time-seconds": "300"
 					}
 				},
 				{
@@ -552,14 +595,23 @@
 				{
 					"id": "create-object",
 					"objectClass": "System",
-					"sid": 588584088970960,
+					"sid": 942772115163414,
 					"parameters": {
 						"object-to-create": "Game_Over_Temp",
-						"layer": "0",
-						"x": "Player.X",
-						"y": "Player.Y",
+						"layer": "1",
+						"x": "LayoutWidth / 4",
+						"y": "LayoutHeight / 4",
 						"create-hierarchy": false,
 						"template-name": "\"\""
+					}
+				},
+				{
+					"id": "add-to-eventvar",
+					"objectClass": "System",
+					"sid": 467890399252891,
+					"parameters": {
+						"variable": "Score",
+						"value": "Area1Points + Area2Points + Area3Points"
 					}
 				},
 				{
@@ -568,6 +620,44 @@
 					"sid": 899503196651352,
 					"parameters": {
 						"time-scale": "0"
+					}
+				},
+				{
+					"id": "set-position",
+					"objectClass": "Player",
+					"sid": 988264749240737,
+					"parameters": {
+						"x": "LayoutWidth / 2",
+						"y": "LayoutHeight / 2"
+					}
+				},
+				{
+					"id": "create-object",
+					"objectClass": "System",
+					"sid": 409053678769011,
+					"parameters": {
+						"object-to-create": "Text",
+						"layer": "1",
+						"x": "LayoutWidth / 2",
+						"y": "LayoutHeight / 2",
+						"create-hierarchy": false,
+						"template-name": "\"\""
+					}
+				},
+				{
+					"id": "set-font-color",
+					"objectClass": "Text",
+					"sid": 770066897190250,
+					"parameters": {
+						"color": "rgbEx(255, 255, 255)"
+					}
+				},
+				{
+					"id": "set-text",
+					"objectClass": "Text",
+					"sid": 877376367871037,
+					"parameters": {
+						"text": "\"Score: \" & Score"
 					}
 				}
 			],
@@ -593,6 +683,15 @@
 					"id": "destroy",
 					"objectClass": "NewArea1Teleport",
 					"sid": 827344528368137
+				},
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 616394319999030,
+					"parameters": {
+						"variable": "Area1Points",
+						"value": "0"
+					}
 				}
 			],
 			"sid": 312840270469433
@@ -616,6 +715,15 @@
 					"id": "destroy",
 					"objectClass": "NewArea2Teleport",
 					"sid": 902532019340160
+				},
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 666727954016982,
+					"parameters": {
+						"variable": "Area2Points",
+						"value": "0"
+					}
 				}
 			],
 			"sid": 480086725088461
@@ -639,6 +747,15 @@
 					"id": "destroy",
 					"objectClass": "NewArea3Teleport",
 					"sid": 336761369971738
+				},
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 283674661300001,
+					"parameters": {
+						"variable": "Area3Points",
+						"value": "0"
+					}
 				}
 			],
 			"sid": 664466877826993
@@ -687,74 +804,6 @@
 				}
 			],
 			"sid": 508021426689528
-		},
-		{
-			"eventType": "block",
-			"conditions": [
-				{
-					"id": "on-collision-with-another-object",
-					"objectClass": "Capybara",
-					"sid": 688458409090415,
-					"parameters": {
-						"object": "Orb"
-					}
-				}
-			],
-			"actions": [
-				{
-					"id": "subtract-from-instvar",
-					"objectClass": "Capybara",
-					"sid": 430352958220660,
-					"parameters": {
-						"instance-variable": "MuckLevel",
-						"value": "Orb.Damage"
-					}
-				},
-				{
-					"id": "destroy",
-					"objectClass": "Orb",
-					"sid": 383718181005514
-				}
-			],
-			"sid": 294076783485119
-		},
-		{
-			"eventType": "block",
-			"conditions": [
-				{
-					"id": "compare-instance-variable",
-					"objectClass": "Capybara",
-					"sid": 176037840577124,
-					"parameters": {
-						"instance-variable": "MuckLevel",
-						"comparison": 3,
-						"value": "0"
-					}
-				}
-			],
-			"actions": [
-				{
-					"id": "set-animation",
-					"objectClass": "Capybara",
-					"sid": 395194413811300,
-					"parameters": {
-						"animation": "\"Running\"",
-						"from": "beginning"
-					}
-				},
-				{
-					"id": "move-to-object",
-					"objectClass": "Capybara",
-					"sid": 368018733908613,
-					"behaviorType": "MoveTo",
-					"parameters": {
-						"object": "MainHubTeleport",
-						"image-point": "0",
-						"mode": "direct"
-					}
-				}
-			],
-			"sid": 980269852110506
 		}
 	],
 	"sid": 787248142491917

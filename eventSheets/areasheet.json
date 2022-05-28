@@ -1,5 +1,5 @@
 {
-	"name": "EnemySheet",
+	"name": "AreaSheet",
 	"events": [
 		{
 			"eventType": "variable",
@@ -117,51 +117,16 @@
 			"eventType": "block",
 			"conditions": [
 				{
-					"id": "every-tick",
-					"objectClass": "System",
-					"sid": 624095210088258
-				}
-			],
-			"actions": [
-				{
-					"id": "move-to-object",
-					"objectClass": "OilEnemy",
-					"sid": 916348415322588,
-					"behaviorType": "MoveTo",
-					"parameters": {
-						"object": "Player",
-						"image-point": "0",
-						"mode": "direct"
-					}
-				},
-				{
-					"id": "move-to-object",
-					"objectClass": "ToxicEnemy",
-					"sid": 355884449844141,
-					"behaviorType": "MoveTo",
-					"parameters": {
-						"object": "Player",
-						"image-point": "0",
-						"mode": "direct"
-					}
-				}
-			],
-			"sid": 474092296559758
-		},
-		{
-			"eventType": "block",
-			"conditions": [
-				{
 					"id": "on-created",
 					"objectClass": "OilEnemy",
-					"sid": 710243080862449
+					"sid": 931117350542151
 				}
 			],
 			"actions": [
 				{
 					"id": "set-instvar-value",
 					"objectClass": "OilEnemy",
-					"sid": 921140706075680,
+					"sid": 387867395542809,
 					"parameters": {
 						"instance-variable": "Damage",
 						"value": "10"
@@ -170,14 +135,75 @@
 				{
 					"id": "set-instvar-value",
 					"objectClass": "OilEnemy",
-					"sid": 639587392856418,
+					"sid": 255869479341570,
 					"parameters": {
 						"instance-variable": "Health",
 						"value": "100"
 					}
 				}
 			],
-			"sid": 911006967064510
+			"sid": 451998278324672
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "has-los-to-object",
+					"objectClass": "OilEnemy",
+					"sid": 404837242015830,
+					"behaviorType": "LineOfSight",
+					"parameters": {
+						"object": "Player",
+						"image-point": "0"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "move-to-object",
+					"objectClass": "OilEnemy",
+					"sid": 221126341491870,
+					"behaviorType": "MoveTo",
+					"parameters": {
+						"object": "Player",
+						"image-point": "0",
+						"mode": "direct"
+					}
+				}
+			],
+			"sid": 132049800556202
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-instance-variable",
+					"objectClass": "OilEnemy",
+					"sid": 426674130986122,
+					"parameters": {
+						"instance-variable": "Health",
+						"comparison": 3,
+						"value": "0"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "destroy",
+					"objectClass": "OilEnemy",
+					"sid": 324825844365441
+				},
+				{
+					"id": "subtract-from-eventvar",
+					"objectClass": "System",
+					"sid": 796448990649555,
+					"parameters": {
+						"variable": "NumEnemies",
+						"value": "1"
+					}
+				}
+			],
+			"sid": 436586085641483
 		},
 		{
 			"eventType": "block",
@@ -209,6 +235,67 @@
 				}
 			],
 			"sid": 865206483924916
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "has-los-to-object",
+					"objectClass": "ToxicEnemy",
+					"sid": 171829110356427,
+					"behaviorType": "LineOfSight",
+					"parameters": {
+						"object": "Player",
+						"image-point": "0"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "move-to-object",
+					"objectClass": "ToxicEnemy",
+					"sid": 565190300908622,
+					"behaviorType": "MoveTo",
+					"parameters": {
+						"object": "Player",
+						"image-point": "0",
+						"mode": "direct"
+					}
+				}
+			],
+			"sid": 332074499748163
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-instance-variable",
+					"objectClass": "ToxicEnemy",
+					"sid": 816824778688588,
+					"parameters": {
+						"instance-variable": "Health",
+						"comparison": 3,
+						"value": "0"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "destroy",
+					"objectClass": "ToxicEnemy",
+					"sid": 876911669356632
+				},
+				{
+					"id": "subtract-from-eventvar",
+					"objectClass": "System",
+					"sid": 197885502774408,
+					"parameters": {
+						"variable": "NumEnemies",
+						"value": "1"
+					}
+				}
+			],
+			"sid": 778239799779207
 		},
 		{
 			"eventType": "block",
@@ -339,43 +426,63 @@
 			"eventType": "block",
 			"conditions": [
 				{
-					"id": "compare-instance-variable",
-					"objectClass": "ToxicEnemy",
-					"sid": 238917241162874,
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 350134602427814
+				}
+			],
+			"actions": [
+				{
+					"id": "set-position",
+					"objectClass": "Capybara",
+					"sid": 805005031593123,
 					"parameters": {
-						"instance-variable": "Health",
-						"comparison": 3,
-						"value": "0"
+						"x": "random(0, LayoutWidth)",
+						"y": "random(300, LayoutHeight)"
+					}
+				}
+			],
+			"sid": 683096179229014
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-collision-with-another-object",
+					"objectClass": "Capybara",
+					"sid": 688458409090415,
+					"parameters": {
+						"object": "Orb"
 					}
 				}
 			],
 			"actions": [
 				{
-					"id": "destroy",
-					"objectClass": "ToxicEnemy",
-					"sid": 826118840280552
+					"id": "subtract-from-instvar",
+					"objectClass": "Capybara",
+					"sid": 430352958220660,
+					"parameters": {
+						"instance-variable": "MuckLevel",
+						"value": "Orb.Damage"
+					}
 				},
 				{
-					"id": "subtract-from-eventvar",
-					"objectClass": "System",
-					"sid": 166036563430930,
-					"parameters": {
-						"variable": "NumEnemies",
-						"value": "1"
-					}
+					"id": "destroy",
+					"objectClass": "Orb",
+					"sid": 383718181005514
 				}
 			],
-			"sid": 912911386876374
+			"sid": 294076783485119
 		},
 		{
 			"eventType": "block",
 			"conditions": [
 				{
 					"id": "compare-instance-variable",
-					"objectClass": "OilEnemy",
-					"sid": 355604298787907,
+					"objectClass": "Capybara",
+					"sid": 176037840577124,
 					"parameters": {
-						"instance-variable": "Health",
+						"instance-variable": "MuckLevel",
 						"comparison": 3,
 						"value": "0"
 					}
@@ -383,21 +490,36 @@
 			],
 			"actions": [
 				{
-					"id": "destroy",
-					"objectClass": "OilEnemy",
-					"sid": 278702143297467
+					"id": "set-animation",
+					"objectClass": "Capybara",
+					"sid": 395194413811300,
+					"parameters": {
+						"animation": "\"Running\"",
+						"from": "beginning"
+					}
 				},
 				{
-					"id": "subtract-from-eventvar",
-					"objectClass": "System",
-					"sid": 464404414411635,
+					"id": "move-to-object",
+					"objectClass": "Capybara",
+					"sid": 368018733908613,
+					"behaviorType": "MoveTo",
 					"parameters": {
-						"variable": "NumEnemies",
+						"object": "MainHubTeleport",
+						"image-point": "0",
+						"mode": "direct"
+					}
+				},
+				{
+					"id": "add-to-eventvar",
+					"objectClass": "System",
+					"sid": 209558412515332,
+					"parameters": {
+						"variable": "Score",
 						"value": "1"
 					}
 				}
 			],
-			"sid": 309809505744184
+			"sid": 980269852110506
 		}
 	],
 	"sid": 583782141291131
