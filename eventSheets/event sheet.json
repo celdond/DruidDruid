@@ -147,6 +147,14 @@
 						"instance-variable": "Direction",
 						"value": "floor( (((PlayerControl.Angle + 45) % 360) / 90) )"
 					}
+				},
+				{
+					"id": "set-progress",
+					"objectClass": "Health",
+					"sid": 359786776667476,
+					"parameters": {
+						"value": "PlayerControl.Health"
+					}
 				}
 			],
 			"sid": 721870304307044
@@ -364,7 +372,7 @@
 				{
 					"id": "on-collision-with-another-object",
 					"objectClass": "Player",
-					"sid": 376355174848612,
+					"sid": 532568056249475,
 					"parameters": {
 						"object": "NewArea2Teleport"
 					}
