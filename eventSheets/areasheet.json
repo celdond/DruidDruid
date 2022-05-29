@@ -150,10 +150,10 @@
 				{
 					"id": "has-los-to-object",
 					"objectClass": "OilEnemy",
-					"sid": 404837242015830,
+					"sid": 223350561005581,
 					"behaviorType": "LineOfSight",
 					"parameters": {
-						"object": "Player",
+						"object": "PlayerControl",
 						"image-point": "0"
 					}
 				}
@@ -162,10 +162,10 @@
 				{
 					"id": "move-to-object",
 					"objectClass": "OilEnemy",
-					"sid": 221126341491870,
+					"sid": 400512356961043,
 					"behaviorType": "MoveTo",
 					"parameters": {
-						"object": "Player",
+						"object": "PlayerControl",
 						"image-point": "0",
 						"mode": "direct"
 					}
@@ -242,10 +242,10 @@
 				{
 					"id": "has-los-to-object",
 					"objectClass": "ToxicEnemy",
-					"sid": 171829110356427,
+					"sid": 193177785597711,
 					"behaviorType": "LineOfSight",
 					"parameters": {
-						"object": "Player",
+						"object": "PlayerControl",
 						"image-point": "0"
 					}
 				}
@@ -254,10 +254,10 @@
 				{
 					"id": "move-to-object",
 					"objectClass": "ToxicEnemy",
-					"sid": 565190300908622,
+					"sid": 725670568864712,
 					"behaviorType": "MoveTo",
 					"parameters": {
-						"object": "Player",
+						"object": "PlayerControl",
 						"image-point": "0",
 						"mode": "direct"
 					}
@@ -302,8 +302,8 @@
 			"conditions": [
 				{
 					"id": "on-collision-with-another-object",
-					"objectClass": "Player",
-					"sid": 585227399739279,
+					"objectClass": "PlayerControl",
+					"sid": 538110122884585,
 					"parameters": {
 						"object": "OilEnemy"
 					}
@@ -353,14 +353,23 @@
 			"conditions": [
 				{
 					"id": "on-collision-with-another-object",
-					"objectClass": "Player",
-					"sid": 363272620094811,
+					"objectClass": "PlayerControl",
+					"sid": 476597439589154,
 					"parameters": {
 						"object": "ToxicEnemy"
 					}
 				}
 			],
 			"actions": [
+				{
+					"id": "subtract-from-instvar",
+					"objectClass": "PlayerControl",
+					"sid": 226616020397406,
+					"parameters": {
+						"instance-variable": "Health",
+						"value": "ToxicEnemy.Damage"
+					}
+				},
 				{
 					"id": "destroy",
 					"objectClass": "ToxicEnemy",

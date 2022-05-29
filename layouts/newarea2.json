@@ -12514,6 +12514,67 @@
 					}
 				},
 				{
+					"type": "PlayerControl",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 776,
+					"instanceVariables": {
+						"Health": 100,
+						"Invincible": false,
+						"Direction": 0
+					},
+					"behaviors": {
+						"8Direction": {
+							"properties": {
+								"max-speed": 200,
+								"acceleration": 600,
+								"deceleration": 500,
+								"directions": "dir-8",
+								"set-angle": "smooth",
+								"default-controls": true,
+								"enabled": true
+							}
+						},
+						"BoundToLayout": {
+							"properties": {
+								"bound-by": "edge"
+							}
+						},
+						"ScrollTo": {
+							"properties": {
+								"enabled": true
+							}
+						},
+						"Solid": {
+							"properties": {
+								"enabled": true,
+								"tags": ""
+							}
+						}
+					},
+					"world": {
+						"x": 849,
+						"y": 288,
+						"width": 49.463060222395924,
+						"height": 68.46306022239592,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
 					"type": "MainHubTeleport",
 					"properties": {
 						"initially-visible": true,

@@ -38,6 +38,11 @@
 			"behaviorId": "scrollto",
 			"name": "ScrollTo",
 			"sid": 528744904044664
+		},
+		{
+			"behaviorId": "solid",
+			"name": "Solid",
+			"sid": 985838567139685
 		}
 	],
 	"effectTypes": [],

@@ -354,15 +354,6 @@
 						"variable": "Area1Degradation",
 						"value": "1"
 					}
-				},
-				{
-					"id": "set-position",
-					"objectClass": "Player",
-					"sid": 510558755098846,
-					"parameters": {
-						"x": "Pad.X",
-						"y": "Pad.Y"
-					}
 				}
 			],
 			"sid": 164449996945983
@@ -422,15 +413,6 @@
 					"parameters": {
 						"variable": "Area2Degradation",
 						"value": "1"
-					}
-				},
-				{
-					"id": "set-position",
-					"objectClass": "Player",
-					"sid": 924288992842274,
-					"parameters": {
-						"x": "854",
-						"y": "250"
 					}
 				}
 			],
@@ -492,15 +474,6 @@
 						"variable": "Area3Degradation",
 						"value": "1"
 					}
-				},
-				{
-					"id": "set-position",
-					"objectClass": "Player",
-					"sid": 121306884971944,
-					"parameters": {
-						"x": "285",
-						"y": "246"
-					}
 				}
 			],
 			"sid": 355126499781896
@@ -524,15 +497,6 @@
 					"sid": 728185393146785,
 					"parameters": {
 						"layout": "MainHub"
-					}
-				},
-				{
-					"id": "set-position",
-					"objectClass": "Player",
-					"sid": 177986038112455,
-					"parameters": {
-						"x": "859",
-						"y": "509"
 					}
 				},
 				{
@@ -571,26 +535,14 @@
 					}
 				},
 				{
-					"id": "add-to-eventvar",
-					"objectClass": "System",
-					"sid": 467890399252891,
-					"parameters": {
-						"variable": "Score",
-						"value": "Area1Points + Area2Points + Area3Points"
-					}
-				},
-				{
-					"id": "set-time-scale",
-					"objectClass": "System",
-					"sid": 899503196651352,
-					"parameters": {
-						"time-scale": "0"
-					}
+					"id": "destroy",
+					"objectClass": "Player",
+					"sid": 980270191409295
 				},
 				{
 					"id": "set-position",
-					"objectClass": "Player",
-					"sid": 988264749240737,
+					"objectClass": "PlayerControl",
+					"sid": 676784512069900,
 					"parameters": {
 						"x": "LayoutWidth / 2",
 						"y": "LayoutHeight / 2"
@@ -599,7 +551,7 @@
 				{
 					"id": "create-object",
 					"objectClass": "System",
-					"sid": 409053678769011,
+					"sid": 419713614940417,
 					"parameters": {
 						"object-to-create": "Text",
 						"layer": "1",
@@ -724,6 +676,97 @@
 				}
 			],
 			"sid": 664466877826993
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-instance-variable",
+					"objectClass": "PlayerControl",
+					"sid": 536691562669693,
+					"parameters": {
+						"instance-variable": "Health",
+						"comparison": 3,
+						"value": "0"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "create-object",
+					"objectClass": "System",
+					"sid": 441732023305607,
+					"parameters": {
+						"object-to-create": "Game_Over_Temp",
+						"layer": "1",
+						"x": "LayoutWidth / 4",
+						"y": "LayoutHeight / 4",
+						"create-hierarchy": false,
+						"template-name": "\"\""
+					}
+				},
+				{
+					"id": "add-to-eventvar",
+					"objectClass": "System",
+					"sid": 379931297649327,
+					"parameters": {
+						"variable": "Score",
+						"value": "Area1Points + Area2Points + Area3Points"
+					}
+				},
+				{
+					"id": "set-time-scale",
+					"objectClass": "System",
+					"sid": 508050725985346,
+					"parameters": {
+						"time-scale": "0"
+					}
+				},
+				{
+					"id": "destroy",
+					"objectClass": "Player",
+					"sid": 662487384214724
+				},
+				{
+					"id": "set-position",
+					"objectClass": "PlayerControl",
+					"sid": 417684210725041,
+					"parameters": {
+						"x": "LayoutWidth / 2",
+						"y": "LayoutHeight / 2"
+					}
+				},
+				{
+					"id": "create-object",
+					"objectClass": "System",
+					"sid": 629613951602542,
+					"parameters": {
+						"object-to-create": "Text",
+						"layer": "1",
+						"x": "LayoutWidth / 2",
+						"y": "LayoutHeight / 2",
+						"create-hierarchy": false,
+						"template-name": "\"\""
+					}
+				},
+				{
+					"id": "set-font-color",
+					"objectClass": "Text",
+					"sid": 688156858567167,
+					"parameters": {
+						"color": "rgbEx(255, 255, 255)"
+					}
+				},
+				{
+					"id": "set-text",
+					"objectClass": "Text",
+					"sid": 839495662003040,
+					"parameters": {
+						"text": "\"Score: \" & Score"
+					}
+				}
+			],
+			"sid": 287906405665262
 		}
 	],
 	"sid": 787248142491917
