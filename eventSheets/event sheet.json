@@ -85,137 +85,121 @@
 			"eventType": "block",
 			"conditions": [
 				{
-					"id": "key-is-down",
-					"objectClass": "Keyboard",
-					"sid": 535536679880948,
-					"parameters": {
-						"key": 87
-					}
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 849229959151333
 				}
 			],
 			"actions": [
 				{
-					"id": "simulate-control",
+					"id": "set-position-to-another-object",
 					"objectClass": "Player",
-					"sid": 757841940346517,
-					"behaviorType": "8Direction",
+					"sid": 134783258307327,
 					"parameters": {
-						"control": "up"
+						"object": "PlayerControl",
+						"image-point-optional": "0"
 					}
 				},
 				{
-					"id": "set-animation",
+					"id": "pin-to-object-properties",
 					"objectClass": "Player",
-					"sid": 399452391893150,
+					"sid": 149264027300890,
+					"behaviorType": "Pin",
 					"parameters": {
-						"animation": "\"PlayerUp\"",
-						"from": "beginning"
+						"pin-to": "PlayerControl",
+						"x": true,
+						"y": true,
+						"angle": false,
+						"width-type": "no",
+						"height-type": "no",
+						"z": false
+					}
+				},
+				{
+					"id": "play",
+					"objectClass": "Audio",
+					"sid": 425699153373604,
+					"parameters": {
+						"audio-file": "spooky jungle boogie",
+						"loop": "looping",
+						"volume": "0",
+						"tag-optional": "\"\""
 					}
 				}
 			],
-			"sid": 143591617347711
+			"sid": 624127681084904
 		},
 		{
 			"eventType": "block",
 			"conditions": [
 				{
-					"id": "key-is-down",
-					"objectClass": "Keyboard",
-					"sid": 182387567055376,
-					"parameters": {
-						"key": 65
-					}
+					"id": "every-tick",
+					"objectClass": "System",
+					"sid": 937201234716791
 				}
 			],
 			"actions": [
 				{
-					"id": "simulate-control",
-					"objectClass": "Player",
-					"sid": 459665981249855,
-					"behaviorType": "8Direction",
+					"id": "set-instvar-value",
+					"objectClass": "PlayerControl",
+					"sid": 429549230914471,
 					"parameters": {
-						"control": "left"
-					}
-				},
-				{
-					"id": "set-animation",
-					"objectClass": "Player",
-					"sid": 727253487359026,
-					"parameters": {
-						"animation": "\"PlayerLeft\"",
-						"from": "beginning"
+						"instance-variable": "Direction",
+						"value": "floor( (((PlayerControl.Angle + 45) % 360) / 90) )"
 					}
 				}
 			],
-			"sid": 880230205004258
+			"sid": 721870304307044
 		},
 		{
 			"eventType": "block",
 			"conditions": [
 				{
-					"id": "key-is-down",
-					"objectClass": "Keyboard",
-					"sid": 879748138712050,
-					"parameters": {
-						"key": 68
-					}
+					"id": "is-moving",
+					"objectClass": "PlayerControl",
+					"sid": 472078423564160,
+					"behaviorType": "8Direction"
 				}
 			],
 			"actions": [
 				{
-					"id": "simulate-control",
-					"objectClass": "Player",
-					"sid": 143749401786166,
-					"behaviorType": "8Direction",
-					"parameters": {
-						"control": "right"
-					}
-				},
-				{
 					"id": "set-animation",
 					"objectClass": "Player",
-					"sid": 950230391021494,
+					"sid": 777695417989584,
 					"parameters": {
-						"animation": "\"PlayerRight\"",
+						"animation": "\"Walk\" & PlayerControl.Direction",
 						"from": "beginning"
 					}
 				}
 			],
-			"sid": 786602937821935
+			"sid": 252422070774807
 		},
 		{
 			"eventType": "block",
 			"conditions": [
 				{
-					"id": "key-is-down",
-					"objectClass": "Keyboard",
-					"sid": 779597505642162,
+					"id": "compare-speed",
+					"objectClass": "PlayerControl",
+					"sid": 429099812504042,
+					"behaviorType": "8Direction",
 					"parameters": {
-						"key": 83
+						"comparison": 0,
+						"speed": "0"
 					}
 				}
 			],
 			"actions": [
 				{
-					"id": "simulate-control",
-					"objectClass": "Player",
-					"sid": 595379912303116,
-					"behaviorType": "8Direction",
-					"parameters": {
-						"control": "down"
-					}
-				},
-				{
 					"id": "set-animation",
 					"objectClass": "Player",
-					"sid": 321633367220657,
+					"sid": 146280820326829,
 					"parameters": {
-						"animation": "\"PlayerDown\"",
+						"animation": "\"Standing\"",
 						"from": "beginning"
 					}
 				}
 			],
-			"sid": 765514019962880
+			"sid": 619952323567257
 		},
 		{
 			"eventType": "block",
@@ -543,15 +527,6 @@
 					}
 				},
 				{
-					"id": "set-instvar-value",
-					"objectClass": "Player",
-					"sid": 863145518474356,
-					"parameters": {
-						"instance-variable": "Health",
-						"value": "100"
-					}
-				},
-				{
 					"id": "set-position",
 					"objectClass": "Player",
 					"sid": 177986038112455,
@@ -578,16 +553,6 @@
 					"parameters": {
 						"comparison": 0,
 						"time-seconds": "300"
-					}
-				},
-				{
-					"id": "compare-two-values",
-					"objectClass": "System",
-					"sid": 115748027321027,
-					"parameters": {
-						"first-value": "Player.Health",
-						"comparison": 3,
-						"second-value": "0"
 					}
 				}
 			],
@@ -759,51 +724,6 @@
 				}
 			],
 			"sid": 664466877826993
-		},
-		{
-			"eventType": "block",
-			"conditions": [
-				{
-					"id": "every-tick",
-					"objectClass": "System",
-					"sid": 798579109195903
-				}
-			],
-			"actions": [
-				{
-					"id": "set-progress",
-					"objectClass": "Health",
-					"sid": 682697394310439,
-					"parameters": {
-						"value": "Player.Health"
-					}
-				}
-			],
-			"sid": 468649991723100
-		},
-		{
-			"eventType": "block",
-			"conditions": [
-				{
-					"id": "on-start-of-layout",
-					"objectClass": "System",
-					"sid": 165404582699160
-				}
-			],
-			"actions": [
-				{
-					"id": "play",
-					"objectClass": "Audio",
-					"sid": 706391154916993,
-					"parameters": {
-						"audio-file": "spooky jungle boogie",
-						"loop": "looping",
-						"volume": "0",
-						"tag-optional": "\"\""
-					}
-				}
-			],
-			"sid": 508021426689528
 		}
 	],
 	"sid": 787248142491917

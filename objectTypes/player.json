@@ -3,40 +3,12 @@
 	"plugin-id": "Sprite",
 	"sid": 587097344214970,
 	"isGlobal": true,
-	"instanceVariables": [
-		{
-			"name": "Health",
-			"type": "number",
-			"desc": "Player Health",
-			"sid": 487654978620480
-		},
-		{
-			"name": "Invincible",
-			"type": "boolean",
-			"desc": "Invincibility time for player",
-			"sid": 166038256770614
-		}
-	],
+	"instanceVariables": [],
 	"behaviorTypes": [
 		{
-			"behaviorId": "bound",
-			"name": "BoundToLayout",
-			"sid": 447944566641075
-		},
-		{
-			"behaviorId": "EightDir",
-			"name": "8Direction",
-			"sid": 687921814500994
-		},
-		{
-			"behaviorId": "scrollto",
-			"name": "ScrollTo",
-			"sid": 957660739196300
-		},
-		{
-			"behaviorId": "solid",
-			"name": "Solid",
-			"sid": 481992418945736
+			"behaviorId": "Pin",
+			"name": "Pin",
+			"sid": 565372393343853
 		}
 	],
 	"effectTypes": [],
@@ -291,7 +263,7 @@
 					}
 				],
 				"sid": 114506761109227,
-				"name": "PlayerDown",
+				"name": "Walk1",
 				"isLooping": false,
 				"isPingPong": false,
 				"repeatCount": 1,
@@ -458,7 +430,7 @@
 					}
 				],
 				"sid": 588846018320102,
-				"name": "PlayerUp",
+				"name": "Walk3",
 				"isLooping": false,
 				"isPingPong": false,
 				"repeatCount": 1,
@@ -703,7 +675,7 @@
 					}
 				],
 				"sid": 845083087676770,
-				"name": "PlayerRight",
+				"name": "Walk0",
 				"isLooping": false,
 				"isPingPong": false,
 				"repeatCount": 1,
@@ -948,7 +920,7 @@
 					}
 				],
 				"sid": 922992592181719,
-				"name": "PlayerLeft",
+				"name": "Walk2",
 				"isLooping": false,
 				"isPingPong": false,
 				"repeatCount": 1,

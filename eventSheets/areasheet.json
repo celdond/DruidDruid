@@ -307,22 +307,13 @@
 					"parameters": {
 						"object": "OilEnemy"
 					}
-				},
-				{
-					"id": "is-boolean-instance-variable-set",
-					"objectClass": "Player",
-					"sid": 666744126146023,
-					"parameters": {
-						"instance-variable": "Invincible"
-					},
-					"isInverted": true
 				}
 			],
 			"actions": [
 				{
 					"id": "subtract-from-instvar",
-					"objectClass": "Player",
-					"sid": 532607857212472,
+					"objectClass": "PlayerControl",
+					"sid": 136299209948244,
 					"parameters": {
 						"instance-variable": "Health",
 						"value": "OilEnemy.Damage"
@@ -330,8 +321,8 @@
 				},
 				{
 					"id": "set-boolean-instvar",
-					"objectClass": "Player",
-					"sid": 392748865272351,
+					"objectClass": "PlayerControl",
+					"sid": 243192028109114,
 					"parameters": {
 						"instance-variable": "Invincible",
 						"value": "true"
@@ -340,15 +331,15 @@
 				{
 					"id": "wait",
 					"objectClass": "System",
-					"sid": 297889819662122,
+					"sid": 316193730015442,
 					"parameters": {
-						"seconds": "1"
+						"seconds": "0.5"
 					}
 				},
 				{
 					"id": "set-boolean-instvar",
-					"objectClass": "Player",
-					"sid": 113152719181612,
+					"objectClass": "PlayerControl",
+					"sid": 357516917264953,
 					"parameters": {
 						"instance-variable": "Invincible",
 						"value": "false"
@@ -367,27 +358,9 @@
 					"parameters": {
 						"object": "ToxicEnemy"
 					}
-				},
-				{
-					"id": "is-boolean-instance-variable-set",
-					"objectClass": "Player",
-					"sid": 259233869019478,
-					"parameters": {
-						"instance-variable": "Invincible"
-					},
-					"isInverted": true
 				}
 			],
 			"actions": [
-				{
-					"id": "subtract-from-instvar",
-					"objectClass": "Player",
-					"sid": 688069714214572,
-					"parameters": {
-						"instance-variable": "Health",
-						"value": "ToxicEnemy.Damage"
-					}
-				},
 				{
 					"id": "destroy",
 					"objectClass": "ToxicEnemy",
@@ -395,8 +368,8 @@
 				},
 				{
 					"id": "set-boolean-instvar",
-					"objectClass": "Player",
-					"sid": 173471834276893,
+					"objectClass": "PlayerControl",
+					"sid": 261834218455675,
 					"parameters": {
 						"instance-variable": "Invincible",
 						"value": "true"
@@ -405,15 +378,15 @@
 				{
 					"id": "wait",
 					"objectClass": "System",
-					"sid": 206678986079911,
+					"sid": 142357283454668,
 					"parameters": {
-						"seconds": "1"
+						"seconds": "0.5"
 					}
 				},
 				{
 					"id": "set-boolean-instvar",
-					"objectClass": "Player",
-					"sid": 138173732915654,
+					"objectClass": "PlayerControl",
+					"sid": 452820342974744,
 					"parameters": {
 						"instance-variable": "Invincible",
 						"value": "false"

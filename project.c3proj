@@ -72,24 +72,16 @@
 		},
 		{
 			"type": "behavior",
-			"id": "bound",
-			"name": "Bound to layout",
+			"id": "Pin",
+			"name": "Pin",
 			"author": "Scirra",
 			"version": "r293.3",
 			"bundled": false
 		},
 		{
 			"type": "behavior",
-			"id": "EightDir",
-			"name": "8 Direction",
-			"author": "Scirra",
-			"version": "r293.3",
-			"bundled": false
-		},
-		{
-			"type": "behavior",
-			"id": "scrollto",
-			"name": "Scroll To",
+			"id": "MoveTo",
+			"name": "Move To",
 			"author": "Scirra",
 			"version": "r293.3",
 			"bundled": false
@@ -104,8 +96,8 @@
 		},
 		{
 			"type": "behavior",
-			"id": "MoveTo",
-			"name": "Move To",
+			"id": "bound",
+			"name": "Bound to layout",
 			"author": "Scirra",
 			"version": "r293.3",
 			"bundled": false
@@ -130,6 +122,22 @@
 			"type": "behavior",
 			"id": "Bullet",
 			"name": "Bullet",
+			"author": "Scirra",
+			"version": "r293.3",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "EightDir",
+			"name": "8 Direction",
+			"author": "Scirra",
+			"version": "r293.3",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "scrollto",
+			"name": "Scroll To",
 			"author": "Scirra",
 			"version": "r293.3",
 			"bundled": false
@@ -159,7 +167,8 @@
 			"Capybara",
 			"Grass",
 			"tree_1",
-			"tree_2"
+			"tree_2",
+			"PlayerControl"
 		],
 		"subfolders": []
 	},

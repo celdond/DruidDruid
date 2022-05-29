@@ -69,49 +69,6 @@
 					}
 				},
 				{
-					"type": "Capybara",
-					"properties": {
-						"initially-visible": true,
-						"initial-animation": "Trapped",
-						"initial-frame": 0,
-						"enable-collisions": true,
-						"live-preview": false
-					},
-					"uid": 24,
-					"instanceVariables": {
-						"MuckLevel": 450
-					},
-					"behaviors": {
-						"MoveTo": {
-							"properties": {
-								"max-speed": 200,
-								"acceleration": 600,
-								"deceleration": 600,
-								"rotate-speed": 0,
-								"set-angle": true,
-								"stop-on-solids": false,
-								"enabled": true
-							}
-						}
-					},
-					"world": {
-						"x": 168,
-						"y": 824,
-						"width": 96,
-						"height": 96,
-						"originX": 0.5,
-						"originY": 0.5,
-						"color": [
-							1,
-							1,
-							1,
-							1
-						],
-						"angle": 0,
-						"zElevation": 0
-					}
-				},
-				{
 					"type": "tree_2",
 					"properties": {
 						"initially-visible": true,
@@ -2736,6 +2693,49 @@
 						],
 						"angle": 0,
 						"zElevation": 1
+					}
+				},
+				{
+					"type": "Capybara",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Trapped",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 24,
+					"instanceVariables": {
+						"MuckLevel": 450
+					},
+					"behaviors": {
+						"MoveTo": {
+							"properties": {
+								"max-speed": 200,
+								"acceleration": 600,
+								"deceleration": 600,
+								"rotate-speed": 0,
+								"set-angle": true,
+								"stop-on-solids": false,
+								"enabled": true
+							}
+						}
+					},
+					"world": {
+						"x": 168,
+						"y": 824,
+						"width": 96,
+						"height": 96,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 2
 					}
 				}
 			],

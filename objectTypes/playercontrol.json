@@ -1,0 +1,72 @@
+{
+	"name": "PlayerControl",
+	"plugin-id": "Sprite",
+	"sid": 803141317269587,
+	"isGlobal": false,
+	"instanceVariables": [
+		{
+			"name": "Health",
+			"type": "number",
+			"desc": "",
+			"sid": 154116617827859
+		},
+		{
+			"name": "Invincible",
+			"type": "boolean",
+			"desc": "",
+			"sid": 775665034320245
+		},
+		{
+			"name": "Direction",
+			"type": "number",
+			"desc": "",
+			"sid": 370693374882098
+		}
+	],
+	"behaviorTypes": [
+		{
+			"behaviorId": "EightDir",
+			"name": "8Direction",
+			"sid": 555290765885080
+		},
+		{
+			"behaviorId": "bound",
+			"name": "BoundToLayout",
+			"sid": 932925908436294
+		},
+		{
+			"behaviorId": "scrollto",
+			"name": "ScrollTo",
+			"sid": 528744904044664
+		}
+	],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 250,
+						"height": 250,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 2444775,
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 906358738259685,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}
