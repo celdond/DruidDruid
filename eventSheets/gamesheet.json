@@ -1,5 +1,5 @@
 {
-	"name": "Event Sheet",
+	"name": "GameSheet",
 	"events": [
 		{
 			"eventType": "variable",
@@ -158,7 +158,7 @@
 				},
 				{
 					"id": "set-text",
-					"objectClass": "Text",
+					"objectClass": "ScoreText",
 					"sid": 905427334330420,
 					"parameters": {
 						"text": "\"Score: \" & Score"
@@ -584,7 +584,7 @@
 				},
 				{
 					"id": "set-font-color",
-					"objectClass": "Text",
+					"objectClass": "ScoreText",
 					"sid": 770066897190250,
 					"parameters": {
 						"color": "rgbEx(255, 255, 255)"
@@ -592,12 +592,20 @@
 				},
 				{
 					"id": "move-to-top",
-					"objectClass": "Text",
+					"objectClass": "ScoreText",
 					"sid": 523838408740411
 				},
 				{
+					"id": "set-font-size",
+					"objectClass": "ScoreText",
+					"sid": 491040654598726,
+					"parameters": {
+						"size-pt": "28"
+					}
+				},
+				{
 					"id": "set-position",
-					"objectClass": "Text",
+					"objectClass": "ScoreText",
 					"sid": 217392790321471,
 					"parameters": {
 						"x": "ViewportWidth(1) / 2 + 20",
@@ -779,7 +787,7 @@
 				},
 				{
 					"id": "set-font-color",
-					"objectClass": "Text",
+					"objectClass": "ScoreText",
 					"sid": 516264670107036,
 					"parameters": {
 						"color": "rgbEx(255, 255, 255)"
@@ -787,12 +795,20 @@
 				},
 				{
 					"id": "move-to-top",
-					"objectClass": "Text",
+					"objectClass": "ScoreText",
 					"sid": 998697347126091
 				},
 				{
+					"id": "set-font-size",
+					"objectClass": "ScoreText",
+					"sid": 384738095903922,
+					"parameters": {
+						"size-pt": "28"
+					}
+				},
+				{
 					"id": "set-position",
-					"objectClass": "Text",
+					"objectClass": "ScoreText",
 					"sid": 773545585381172,
 					"parameters": {
 						"x": "ViewportWidth(1) / 2 + 20",

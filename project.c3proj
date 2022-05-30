@@ -71,6 +71,14 @@
 			"bundled": false
 		},
 		{
+			"type": "plugin",
+			"id": "Button",
+			"name": "Button",
+			"author": "Scirra",
+			"version": "r293.3",
+			"bundled": false
+		},
+		{
 			"type": "behavior",
 			"id": "Pin",
 			"name": "Pin",
@@ -163,13 +171,21 @@
 			"TiledBackground",
 			"Health",
 			"Audio",
-			"Text",
+			"ScoreText",
 			"Animal",
 			"Grass",
 			"tree_1",
 			"tree_2",
 			"PlayerControl",
-			"AnimalArray"
+			"AnimalArray",
+			"StartButton",
+			"Title",
+			"Sprite",
+			"TextBacking",
+			"ControlsText",
+			"InstructionsText",
+			"BackButton",
+			"HowToPlayButton"
 		],
 		"subfolders": []
 	},
@@ -184,14 +200,18 @@
 			"MainHub",
 			"NewArea1",
 			"NewArea2",
-			"NewArea3"
+			"NewArea3",
+			"Start Screen",
+			"Control Screen"
 		],
 		"subfolders": []
 	},
 	"eventSheets": {
 		"items": [
-			"Event Sheet",
-			"AreaSheet"
+			"GameSheet",
+			"AreaSheet",
+			"StartSheet",
+			"ControlsSheet"
 		],
 		"subfolders": []
 	},

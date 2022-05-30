@@ -23,7 +23,7 @@
 		},
 		{
 			"eventType": "include",
-			"includeSheet": "Event Sheet"
+			"includeSheet": "GameSheet"
 		},
 		{
 			"eventType": "block",

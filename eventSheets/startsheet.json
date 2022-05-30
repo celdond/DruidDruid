@@ -1,0 +1,48 @@
+{
+	"name": "StartSheet",
+	"events": [
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-clicked",
+					"objectClass": "StartButton",
+					"sid": 903510059019459
+				}
+			],
+			"actions": [
+				{
+					"id": "go-to-layout",
+					"objectClass": "System",
+					"sid": 619053820587643,
+					"parameters": {
+						"layout": "MainHub"
+					}
+				}
+			],
+			"sid": 474022436930931
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-clicked",
+					"objectClass": "HowToPlayButton",
+					"sid": 363206784317090
+				}
+			],
+			"actions": [
+				{
+					"id": "go-to-layout",
+					"objectClass": "System",
+					"sid": 836465104701175,
+					"parameters": {
+						"layout": "Control Screen"
+					}
+				}
+			],
+			"sid": 341866359852704
+		}
+	],
+	"sid": 751255208241579
+}

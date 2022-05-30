@@ -1,0 +1,27 @@
+{
+	"name": "ControlsSheet",
+	"events": [
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-clicked",
+					"objectClass": "BackButton",
+					"sid": 300260394566051
+				}
+			],
+			"actions": [
+				{
+					"id": "go-to-layout",
+					"objectClass": "System",
+					"sid": 883590105305848,
+					"parameters": {
+						"layout": "Start Screen"
+					}
+				}
+			],
+			"sid": 262970452886363
+		}
+	],
+	"sid": 408508749553271
+}
