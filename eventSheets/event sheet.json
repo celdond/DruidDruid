@@ -155,6 +155,14 @@
 					"parameters": {
 						"value": "PlayerControl.Health"
 					}
+				},
+				{
+					"id": "set-text",
+					"objectClass": "Text",
+					"sid": 905427334330420,
+					"parameters": {
+						"text": "\"Score: \" & Score"
+					}
 				}
 			],
 			"sid": 721870304307044
@@ -521,7 +529,7 @@
 				{
 					"id": "compare-time",
 					"objectClass": "System",
-					"sid": 249974078812381,
+					"sid": 843051438912318,
 					"parameters": {
 						"comparison": 0,
 						"time-seconds": "300"
@@ -529,6 +537,15 @@
 				}
 			],
 			"actions": [
+				{
+					"id": "add-to-eventvar",
+					"objectClass": "System",
+					"sid": 927616240666928,
+					"parameters": {
+						"variable": "Score",
+						"value": "Area1Points + Area2Points + Area3Points"
+					}
+				},
 				{
 					"id": "create-object",
 					"objectClass": "System",
@@ -540,6 +557,15 @@
 						"y": "LayoutHeight / 4",
 						"create-hierarchy": false,
 						"template-name": "\"\""
+					}
+				},
+				{
+					"id": "set-animation",
+					"objectClass": "Game_Over_Temp",
+					"sid": 874094910118706,
+					"parameters": {
+						"animation": "\"Win\"",
+						"from": "beginning"
 					}
 				},
 				{
@@ -557,19 +583,6 @@
 					}
 				},
 				{
-					"id": "create-object",
-					"objectClass": "System",
-					"sid": 419713614940417,
-					"parameters": {
-						"object-to-create": "Text",
-						"layer": "1",
-						"x": "LayoutWidth / 2",
-						"y": "LayoutHeight / 2",
-						"create-hierarchy": false,
-						"template-name": "\"\""
-					}
-				},
-				{
 					"id": "set-font-color",
 					"objectClass": "Text",
 					"sid": 770066897190250,
@@ -578,11 +591,25 @@
 					}
 				},
 				{
-					"id": "set-text",
+					"id": "move-to-top",
 					"objectClass": "Text",
-					"sid": 877376367871037,
+					"sid": 523838408740411
+				},
+				{
+					"id": "set-position",
+					"objectClass": "Text",
+					"sid": 217392790321471,
 					"parameters": {
-						"text": "\"Score: \" & Score"
+						"x": "ViewportWidth(1) / 2 + 20",
+						"y": "ViewportHeight(1) / 2 - 50"
+					}
+				},
+				{
+					"id": "set-time-scale",
+					"objectClass": "System",
+					"sid": 829701734783716,
+					"parameters": {
+						"time-scale": "0"
 					}
 				}
 			],
@@ -697,22 +724,14 @@
 						"comparison": 3,
 						"value": "0"
 					}
+				},
+				{
+					"id": "trigger-once-while-true",
+					"objectClass": "System",
+					"sid": 808824856466936
 				}
 			],
 			"actions": [
-				{
-					"id": "create-object",
-					"objectClass": "System",
-					"sid": 441732023305607,
-					"parameters": {
-						"object-to-create": "Game_Over_Temp",
-						"layer": "1",
-						"x": "LayoutWidth / 4",
-						"y": "LayoutHeight / 4",
-						"create-hierarchy": false,
-						"template-name": "\"\""
-					}
-				},
 				{
 					"id": "add-to-eventvar",
 					"objectClass": "System",
@@ -723,54 +742,69 @@
 					}
 				},
 				{
-					"id": "set-time-scale",
-					"objectClass": "System",
-					"sid": 508050725985346,
-					"parameters": {
-						"time-scale": "0"
-					}
-				},
-				{
-					"id": "destroy",
-					"objectClass": "Player",
-					"sid": 662487384214724
-				},
-				{
-					"id": "set-position",
-					"objectClass": "PlayerControl",
-					"sid": 417684210725041,
-					"parameters": {
-						"x": "LayoutWidth / 2",
-						"y": "LayoutHeight / 2"
-					}
-				},
-				{
 					"id": "create-object",
 					"objectClass": "System",
-					"sid": 629613951602542,
+					"sid": 125755685801678,
 					"parameters": {
-						"object-to-create": "Text",
+						"object-to-create": "Game_Over_Temp",
 						"layer": "1",
-						"x": "LayoutWidth / 2",
-						"y": "LayoutHeight / 2",
+						"x": "ViewportWidth(0) / 2",
+						"y": "ViewportHeight(0) / 2",
 						"create-hierarchy": false,
 						"template-name": "\"\""
 					}
 				},
 				{
+					"id": "set-animation",
+					"objectClass": "Game_Over_Temp",
+					"sid": 782903504526969,
+					"parameters": {
+						"animation": "\"Lose\"",
+						"from": "beginning"
+					}
+				},
+				{
+					"id": "destroy",
+					"objectClass": "Player",
+					"sid": 962596242364753
+				},
+				{
+					"id": "set-position",
+					"objectClass": "PlayerControl",
+					"sid": 215944239310596,
+					"parameters": {
+						"x": "LayoutWidth / 4",
+						"y": "LayoutHeight / 4 + 20"
+					}
+				},
+				{
 					"id": "set-font-color",
 					"objectClass": "Text",
-					"sid": 688156858567167,
+					"sid": 516264670107036,
 					"parameters": {
 						"color": "rgbEx(255, 255, 255)"
 					}
 				},
 				{
-					"id": "set-text",
+					"id": "move-to-top",
 					"objectClass": "Text",
-					"sid": 839495662003040,
+					"sid": 998697347126091
+				},
+				{
+					"id": "set-position",
+					"objectClass": "Text",
+					"sid": 773545585381172,
 					"parameters": {
-						"text": "\"Score: \" & Score"
+						"x": "ViewportWidth(1) / 2 + 20",
+						"y": "ViewportHeight(1) / 2 - 50"
+					}
+				},
+				{
+					"id": "set-time-scale",
+					"objectClass": "System",
+					"sid": 528577798190684,
+					"parameters": {
+						"time-scale": "0"
 					}
 				}
 			],

@@ -926,6 +926,49 @@
 				"repeatCount": 1,
 				"repeatTo": 0,
 				"speed": 15
+			},
+			{
+				"frames": [
+					{
+						"width": 64,
+						"height": 64,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 2098344,
+						"collisionPoly": {
+							"points": [
+								0.18248175182481752,
+								0.2,
+								0.5,
+								0,
+								0.8102189781021898,
+								0.2,
+								0.8102189781021898,
+								0.5,
+								0.9854014598540146,
+								0.984,
+								0.5,
+								0.992,
+								0.0072992700729927005,
+								0.984,
+								0.18248175182481752,
+								0.5
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 849085615064342,
+				"name": "Player_Dead_Temp",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
 			}
 		],
 		"subfolders": []

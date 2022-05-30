@@ -11,20 +11,43 @@
 			{
 				"frames": [
 					{
-						"width": 854,
-						"height": 480,
+						"width": 1708,
+						"height": 960,
 						"originX": 0.5,
 						"originY": 0.5,
 						"originalSource": "",
 						"exportFormat": "png",
 						"exportQuality": 0.8,
-						"imageSpriteId": 7787685,
+						"imageSpriteId": 9806229,
 						"useCollisionPoly": true,
 						"duration": 1
 					}
 				],
-				"sid": 784161536566901,
-				"name": "Animation 1",
+				"sid": 135619604755285,
+				"name": "Win",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			},
+			{
+				"frames": [
+					{
+						"width": 1708,
+						"height": 960,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 8857308,
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 528239139767836,
+				"name": "Lose",
 				"isLooping": false,
 				"isPingPong": false,
 				"repeatCount": 1,

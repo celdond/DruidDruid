@@ -164,11 +164,12 @@
 			"Health",
 			"Audio",
 			"Text",
-			"Capybara",
+			"Animal",
 			"Grass",
 			"tree_1",
 			"tree_2",
-			"PlayerControl"
+			"PlayerControl",
+			"AnimalArray"
 		],
 		"subfolders": []
 	},

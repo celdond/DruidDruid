@@ -12,6 +12,16 @@
 			"sid": 271951555875029
 		},
 		{
+			"eventType": "variable",
+			"name": "AnimalChosen",
+			"type": "string",
+			"initialValue": "",
+			"comment": "Animal Chosen to save",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 849059504586241
+		},
+		{
 			"eventType": "include",
 			"includeSheet": "Event Sheet"
 		},
@@ -64,6 +74,44 @@
 					}
 				},
 				{
+					"id": "clear",
+					"objectClass": "AnimalArray",
+					"sid": 598531365980150,
+					"parameters": {
+						"value": "0"
+					}
+				},
+				{
+					"id": "set-size",
+					"objectClass": "AnimalArray",
+					"sid": 653760791323637,
+					"parameters": {
+						"width": "2",
+						"height": "1",
+						"depth": "1"
+					}
+				},
+				{
+					"id": "push",
+					"objectClass": "AnimalArray",
+					"sid": 163839832379379,
+					"parameters": {
+						"where": "front",
+						"value": "\"Capybara\"",
+						"axis": "x"
+					}
+				},
+				{
+					"id": "push",
+					"objectClass": "AnimalArray",
+					"sid": 997435384313686,
+					"parameters": {
+						"where": "front",
+						"value": "\"Toucan\"",
+						"axis": "x"
+					}
+				},
+				{
 					"id": "set-eventvar-value",
 					"objectClass": "System",
 					"sid": 741898421775512,
@@ -96,12 +144,12 @@
 				{
 					"id": "create-object-by-name",
 					"objectClass": "System",
-					"sid": 394880921236904,
+					"sid": 452142164541832,
 					"parameters": {
 						"object-name": "EnemyArray.At(random(EnemyArray.Width - 2))",
 						"layer": "0",
 						"x": "random(LayoutWidth)",
-						"y": "random(LayoutHeight)",
+						"y": "random(400, LayoutHeight)",
 						"create-hierarchy": false,
 						"template-name": "\"\""
 					}
@@ -307,6 +355,15 @@
 					"parameters": {
 						"object": "OilEnemy"
 					}
+				},
+				{
+					"id": "is-boolean-instance-variable-set",
+					"objectClass": "PlayerControl",
+					"sid": 753157636790535,
+					"parameters": {
+						"instance-variable": "Invincible"
+					},
+					"isInverted": true
 				}
 			],
 			"actions": [
@@ -358,6 +415,15 @@
 					"parameters": {
 						"object": "ToxicEnemy"
 					}
+				},
+				{
+					"id": "is-boolean-instance-variable-set",
+					"objectClass": "PlayerControl",
+					"sid": 876162729887170,
+					"parameters": {
+						"instance-variable": "Invincible"
+					},
+					"isInverted": true
 				}
 			],
 			"actions": [
@@ -415,13 +481,36 @@
 			],
 			"actions": [
 				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 837510198467179,
+					"parameters": {
+						"variable": "AnimalChosen",
+						"value": "AnimalArray.At(random(AnimalArray.Width - 2))"
+					}
+				},
+				{
 					"id": "set-position",
-					"objectClass": "Capybara",
+					"objectClass": "Animal",
 					"sid": 805005031593123,
 					"parameters": {
 						"x": "random(0, LayoutWidth)",
 						"y": "random(300, LayoutHeight)"
 					}
+				},
+				{
+					"id": "set-animation",
+					"objectClass": "Animal",
+					"sid": 967447044673140,
+					"parameters": {
+						"animation": "AnimalChosen & \"_Trapped\"",
+						"from": "beginning"
+					}
+				},
+				{
+					"id": "move-to-top",
+					"objectClass": "Animal",
+					"sid": 546477479288793
 				}
 			],
 			"sid": 683096179229014
@@ -431,7 +520,7 @@
 			"conditions": [
 				{
 					"id": "on-collision-with-another-object",
-					"objectClass": "Capybara",
+					"objectClass": "Animal",
 					"sid": 688458409090415,
 					"parameters": {
 						"object": "Orb"
@@ -441,7 +530,7 @@
 			"actions": [
 				{
 					"id": "subtract-from-instvar",
-					"objectClass": "Capybara",
+					"objectClass": "Animal",
 					"sid": 430352958220660,
 					"parameters": {
 						"instance-variable": "MuckLevel",
@@ -461,28 +550,33 @@
 			"conditions": [
 				{
 					"id": "compare-instance-variable",
-					"objectClass": "Capybara",
+					"objectClass": "Animal",
 					"sid": 176037840577124,
 					"parameters": {
 						"instance-variable": "MuckLevel",
 						"comparison": 3,
 						"value": "0"
 					}
+				},
+				{
+					"id": "trigger-once-while-true",
+					"objectClass": "System",
+					"sid": 994897385690623
 				}
 			],
 			"actions": [
 				{
 					"id": "set-animation",
-					"objectClass": "Capybara",
-					"sid": 395194413811300,
+					"objectClass": "Animal",
+					"sid": 876874562291288,
 					"parameters": {
-						"animation": "\"Running\"",
+						"animation": "AnimalChosen & \"_Moving\"",
 						"from": "beginning"
 					}
 				},
 				{
 					"id": "move-to-object",
-					"objectClass": "Capybara",
+					"objectClass": "Animal",
 					"sid": 368018733908613,
 					"behaviorType": "MoveTo",
 					"parameters": {
