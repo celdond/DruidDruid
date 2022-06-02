@@ -185,7 +185,9 @@
 			"ControlsText",
 			"InstructionsText",
 			"BackButton",
-			"HowToPlayButton"
+			"HowToPlayButton",
+			"WorkerEnemy",
+			"WorkerBullet"
 		],
 		"subfolders": []
 	},

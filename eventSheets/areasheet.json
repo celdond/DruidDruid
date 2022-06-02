@@ -46,9 +46,9 @@
 				{
 					"id": "set-size",
 					"objectClass": "EnemyArray",
-					"sid": 214806349205953,
+					"sid": 542317832485967,
 					"parameters": {
-						"width": "2",
+						"width": "3",
 						"height": "1",
 						"depth": "1"
 					}
@@ -70,6 +70,16 @@
 					"parameters": {
 						"where": "front",
 						"value": "\"ToxicEnemy\"",
+						"axis": "x"
+					}
+				},
+				{
+					"id": "push",
+					"objectClass": "EnemyArray",
+					"sid": 269661876827660,
+					"parameters": {
+						"where": "front",
+						"value": "\"WorkerEnemy\"",
 						"axis": "x"
 					}
 				},
@@ -144,19 +154,15 @@
 				{
 					"id": "create-object-by-name",
 					"objectClass": "System",
-					"sid": 452142164541832,
+					"sid": 237731446918103,
 					"parameters": {
-						"object-name": "EnemyArray.At(random(EnemyArray.Width - 2))",
+						"object-name": "EnemyArray.At(random(EnemyArray.Width - 3))",
 						"layer": "0",
 						"x": "random(LayoutWidth)",
 						"y": "random(400, LayoutHeight)",
 						"create-hierarchy": false,
 						"template-name": "\"\""
 					}
-				},
-				{
-					"type": "script",
-					"script": "console.log('spawning')"
 				}
 			],
 			"sid": 439746720497895
@@ -257,6 +263,96 @@
 			"eventType": "block",
 			"conditions": [
 				{
+					"id": "on-collision-with-another-object",
+					"objectClass": "Orb",
+					"sid": 782483521716034,
+					"parameters": {
+						"object": "OilEnemy"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "subtract-from-instvar",
+					"objectClass": "OilEnemy",
+					"sid": 168159782086016,
+					"parameters": {
+						"instance-variable": "Health",
+						"value": "Orb.Damage"
+					}
+				},
+				{
+					"id": "destroy",
+					"objectClass": "Orb",
+					"sid": 772111895380931
+				}
+			],
+			"sid": 810931190745006
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-collision-with-another-object",
+					"objectClass": "PlayerControl",
+					"sid": 122586064735190,
+					"parameters": {
+						"object": "OilEnemy"
+					}
+				},
+				{
+					"id": "is-boolean-instance-variable-set",
+					"objectClass": "PlayerControl",
+					"sid": 386438217465385,
+					"parameters": {
+						"instance-variable": "Invincible"
+					},
+					"isInverted": true
+				}
+			],
+			"actions": [
+				{
+					"id": "subtract-from-instvar",
+					"objectClass": "PlayerControl",
+					"sid": 388781079233256,
+					"parameters": {
+						"instance-variable": "Health",
+						"value": "OilEnemy.Damage"
+					}
+				},
+				{
+					"id": "set-boolean-instvar",
+					"objectClass": "PlayerControl",
+					"sid": 560825171271995,
+					"parameters": {
+						"instance-variable": "Invincible",
+						"value": "true"
+					}
+				},
+				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 405132890289571,
+					"parameters": {
+						"seconds": "0.5"
+					}
+				},
+				{
+					"id": "set-boolean-instvar",
+					"objectClass": "PlayerControl",
+					"sid": 741373092063061,
+					"parameters": {
+						"instance-variable": "Invincible",
+						"value": "false"
+					}
+				}
+			],
+			"sid": 314744186092345
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
 					"id": "on-created",
 					"objectClass": "ToxicEnemy",
 					"sid": 615346893955035
@@ -350,60 +446,30 @@
 			"conditions": [
 				{
 					"id": "on-collision-with-another-object",
-					"objectClass": "PlayerControl",
-					"sid": 538110122884585,
+					"objectClass": "Orb",
+					"sid": 362624251264730,
 					"parameters": {
-						"object": "OilEnemy"
+						"object": "ToxicEnemy"
 					}
-				},
-				{
-					"id": "is-boolean-instance-variable-set",
-					"objectClass": "PlayerControl",
-					"sid": 753157636790535,
-					"parameters": {
-						"instance-variable": "Invincible"
-					},
-					"isInverted": true
 				}
 			],
 			"actions": [
 				{
 					"id": "subtract-from-instvar",
-					"objectClass": "PlayerControl",
-					"sid": 136299209948244,
+					"objectClass": "ToxicEnemy",
+					"sid": 517681299149455,
 					"parameters": {
 						"instance-variable": "Health",
-						"value": "OilEnemy.Damage"
+						"value": "Orb.Damage"
 					}
 				},
 				{
-					"id": "set-boolean-instvar",
-					"objectClass": "PlayerControl",
-					"sid": 243192028109114,
-					"parameters": {
-						"instance-variable": "Invincible",
-						"value": "true"
-					}
-				},
-				{
-					"id": "wait",
-					"objectClass": "System",
-					"sid": 316193730015442,
-					"parameters": {
-						"seconds": "0.5"
-					}
-				},
-				{
-					"id": "set-boolean-instvar",
-					"objectClass": "PlayerControl",
-					"sid": 357516917264953,
-					"parameters": {
-						"instance-variable": "Invincible",
-						"value": "false"
-					}
+					"id": "destroy",
+					"objectClass": "Orb",
+					"sid": 919919734060125
 				}
 			],
-			"sid": 954663831865579
+			"sid": 828462275779781
 		},
 		{
 			"eventType": "block",
@@ -411,7 +477,7 @@
 				{
 					"id": "on-collision-with-another-object",
 					"objectClass": "PlayerControl",
-					"sid": 476597439589154,
+					"sid": 589090826796354,
 					"parameters": {
 						"object": "ToxicEnemy"
 					}
@@ -419,7 +485,7 @@
 				{
 					"id": "is-boolean-instance-variable-set",
 					"objectClass": "PlayerControl",
-					"sid": 876162729887170,
+					"sid": 213693538433141,
 					"parameters": {
 						"instance-variable": "Invincible"
 					},
@@ -430,7 +496,7 @@
 				{
 					"id": "subtract-from-instvar",
 					"objectClass": "PlayerControl",
-					"sid": 226616020397406,
+					"sid": 887238405395433,
 					"parameters": {
 						"instance-variable": "Health",
 						"value": "ToxicEnemy.Damage"
@@ -439,12 +505,12 @@
 				{
 					"id": "destroy",
 					"objectClass": "ToxicEnemy",
-					"sid": 586198311965926
+					"sid": 227382975052426
 				},
 				{
 					"id": "set-boolean-instvar",
 					"objectClass": "PlayerControl",
-					"sid": 261834218455675,
+					"sid": 368957412075951,
 					"parameters": {
 						"instance-variable": "Invincible",
 						"value": "true"
@@ -453,7 +519,7 @@
 				{
 					"id": "wait",
 					"objectClass": "System",
-					"sid": 142357283454668,
+					"sid": 650601354967661,
 					"parameters": {
 						"seconds": "0.5"
 					}
@@ -461,14 +527,14 @@
 				{
 					"id": "set-boolean-instvar",
 					"objectClass": "PlayerControl",
-					"sid": 452820342974744,
+					"sid": 949242887849878,
 					"parameters": {
 						"instance-variable": "Invincible",
 						"value": "false"
 					}
 				}
 			],
-			"sid": 303084562178469
+			"sid": 718045160421882
 		},
 		{
 			"eventType": "block",
@@ -596,6 +662,254 @@
 				}
 			],
 			"sid": 980269852110506
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-created",
+					"objectClass": "WorkerEnemy",
+					"sid": 733127401943659
+				}
+			],
+			"actions": [
+				{
+					"id": "set-instvar-value",
+					"objectClass": "WorkerEnemy",
+					"sid": 657888982278410,
+					"parameters": {
+						"instance-variable": "Health",
+						"value": "100"
+					}
+				},
+				{
+					"id": "set-boolean-instvar",
+					"objectClass": "WorkerEnemy",
+					"sid": 720016199287830,
+					"parameters": {
+						"instance-variable": "CanFire",
+						"value": "true"
+					}
+				}
+			],
+			"sid": 478956324009692
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "has-los-to-object",
+					"objectClass": "WorkerEnemy",
+					"sid": 993389991409976,
+					"behaviorType": "LineOfSight",
+					"parameters": {
+						"object": "PlayerControl",
+						"image-point": "0"
+					}
+				},
+				{
+					"id": "compare-two-values",
+					"objectClass": "System",
+					"sid": 485187956726658,
+					"parameters": {
+						"first-value": "distance(Player.X, Player.Y, WorkerEnemy.X, WorkerEnemy.Y)",
+						"comparison": 4,
+						"second-value": "200"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "move-to-object",
+					"objectClass": "WorkerEnemy",
+					"sid": 887349133792941,
+					"behaviorType": "MoveTo",
+					"parameters": {
+						"object": "Player",
+						"image-point": "0",
+						"mode": "direct"
+					}
+				}
+			],
+			"sid": 585119836732894
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "else",
+					"objectClass": "System",
+					"sid": 832609814980389
+				}
+			],
+			"actions": [
+				{
+					"id": "stop",
+					"objectClass": "WorkerEnemy",
+					"sid": 109888112182473,
+					"behaviorType": "MoveTo"
+				}
+			],
+			"sid": 479556684148564
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-instance-variable",
+					"objectClass": "WorkerEnemy",
+					"sid": 592484976159252,
+					"parameters": {
+						"instance-variable": "Health",
+						"comparison": 3,
+						"value": "0"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "destroy",
+					"objectClass": "WorkerEnemy",
+					"sid": 587148956929594
+				}
+			],
+			"sid": 840554240826126
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-collision-with-another-object",
+					"objectClass": "WorkerEnemy",
+					"sid": 940699061276206,
+					"parameters": {
+						"object": "Orb"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "subtract-from-instvar",
+					"objectClass": "WorkerEnemy",
+					"sid": 192255859420324,
+					"parameters": {
+						"instance-variable": "Health",
+						"value": "Orb.Damage"
+					}
+				},
+				{
+					"id": "destroy",
+					"objectClass": "Orb",
+					"sid": 588791866571409
+				}
+			],
+			"sid": 269656366439660
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "is-boolean-instance-variable-set",
+					"objectClass": "WorkerEnemy",
+					"sid": 211567728539298,
+					"parameters": {
+						"instance-variable": "CanFire"
+					}
+				},
+				{
+					"id": "has-los-to-object",
+					"objectClass": "WorkerEnemy",
+					"sid": 560837743036933,
+					"behaviorType": "LineOfSight",
+					"parameters": {
+						"object": "PlayerControl",
+						"image-point": "0"
+					}
+				}
+			],
+			"actions": [
+				{
+					"type": "script",
+					"script": "console.log('firing')"
+				},
+				{
+					"id": "spawn-another-object",
+					"objectClass": "WorkerEnemy",
+					"sid": 731282544815370,
+					"parameters": {
+						"object": "WorkerBullet",
+						"layer": "0",
+						"image-point": "0",
+						"create-hierarchy": false
+					}
+				},
+				{
+					"id": "set-angle-of-motion",
+					"objectClass": "WorkerBullet",
+					"sid": 643191412840417,
+					"behaviorType": "Bullet",
+					"parameters": {
+						"angle": "angle(Player.X, Player.Y, WorkerBullet.X, WorkerBullet.Y)"
+					}
+				},
+				{
+					"id": "set-boolean-instvar",
+					"objectClass": "WorkerEnemy",
+					"sid": 236459754255546,
+					"parameters": {
+						"instance-variable": "CanFire",
+						"value": "false"
+					}
+				},
+				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 175795280709428,
+					"parameters": {
+						"seconds": "1.5"
+					}
+				},
+				{
+					"id": "set-boolean-instvar",
+					"objectClass": "WorkerEnemy",
+					"sid": 967143175363884,
+					"parameters": {
+						"instance-variable": "CanFire",
+						"value": "true"
+					}
+				}
+			],
+			"sid": 747109769233384
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-collision-with-another-object",
+					"objectClass": "Player",
+					"sid": 880129340392066,
+					"parameters": {
+						"object": "WorkerBullet"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "subtract-from-instvar",
+					"objectClass": "PlayerControl",
+					"sid": 997454457817993,
+					"parameters": {
+						"instance-variable": "Health",
+						"value": "WorkerBullet.damage"
+					}
+				},
+				{
+					"id": "destroy",
+					"objectClass": "WorkerBullet",
+					"sid": 685399312874271
+				}
+			],
+			"sid": 854762411024635
 		}
 	],
 	"sid": 583782141291131
