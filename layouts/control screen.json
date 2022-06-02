@@ -2071,7 +2071,7 @@
 				{
 					"type": "InstructionsText",
 					"properties": {
-						"text": "1.) Teleport to New Areas.       2.) Shoot Oncoming Attackers. 3.) Save Animals by Shooting Them Out of Muck",
+						"text": "1.) Teleport to New Areas.       2.) Shoot Oncoming Attackers. 3.) Save Animals by Shooting Them Out of Muck                      4.) You have 5 Minutes",
 						"enable-bbcode": true,
 						"font": "Palatino Linotype",
 						"size": 20,
@@ -2128,7 +2128,7 @@
 					"behaviors": {},
 					"world": {
 						"x": 372,
-						"y": 348,
+						"y": 357,
 						"width": 104,
 						"height": 44,
 						"originX": 0,
