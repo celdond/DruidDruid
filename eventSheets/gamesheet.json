@@ -250,6 +250,17 @@
 						"x": "Mouse.X",
 						"y": "Mouse.Y"
 					}
+				},
+				{
+					"id": "play",
+					"objectClass": "Audio",
+					"sid": 696381930265791,
+					"parameters": {
+						"audio-file": "nymphShoot",
+						"loop": "not-looping",
+						"volume": "-15",
+						"tag-optional": "\"\""
+					}
 				}
 			],
 			"sid": 322442620557720
@@ -267,6 +278,17 @@
 				}
 			],
 			"actions": [
+				{
+					"id": "play",
+					"objectClass": "Audio",
+					"sid": 932488238704369,
+					"parameters": {
+						"audio-file": "teleport",
+						"loop": "not-looping",
+						"volume": "-20",
+						"tag-optional": "\"\""
+					}
+				},
 				{
 					"id": "go-to-layout",
 					"objectClass": "System",
@@ -328,6 +350,17 @@
 			],
 			"actions": [
 				{
+					"id": "play",
+					"objectClass": "Audio",
+					"sid": 875238367198793,
+					"parameters": {
+						"audio-file": "teleport",
+						"loop": "not-looping",
+						"volume": "-20",
+						"tag-optional": "\"\""
+					}
+				},
+				{
 					"id": "go-to-layout",
 					"objectClass": "System",
 					"sid": 448693685917918,
@@ -388,6 +421,17 @@
 			],
 			"actions": [
 				{
+					"id": "play",
+					"objectClass": "Audio",
+					"sid": 653451117680234,
+					"parameters": {
+						"audio-file": "teleport",
+						"loop": "not-looping",
+						"volume": "-20",
+						"tag-optional": "\"\""
+					}
+				},
+				{
 					"id": "go-to-layout",
 					"objectClass": "System",
 					"sid": 871159571575809,
@@ -447,6 +491,17 @@
 				}
 			],
 			"actions": [
+				{
+					"id": "play",
+					"objectClass": "Audio",
+					"sid": 910865975074329,
+					"parameters": {
+						"audio-file": "teleport",
+						"loop": "not-looping",
+						"volume": "-20",
+						"tag-optional": "\"\""
+					}
+				},
 				{
 					"id": "go-to-layout",
 					"objectClass": "System",

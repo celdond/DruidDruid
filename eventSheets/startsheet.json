@@ -18,6 +18,17 @@
 					"parameters": {
 						"layout": "MainHub"
 					}
+				},
+				{
+					"id": "play",
+					"objectClass": "Audio",
+					"sid": 365727765601885,
+					"parameters": {
+						"audio-file": "click",
+						"loop": "not-looping",
+						"volume": "-10",
+						"tag-optional": "\"\""
+					}
 				}
 			],
 			"sid": 474022436930931
@@ -38,6 +49,17 @@
 					"sid": 836465104701175,
 					"parameters": {
 						"layout": "Control Screen"
+					}
+				},
+				{
+					"id": "play",
+					"objectClass": "Audio",
+					"sid": 650987461702150,
+					"parameters": {
+						"audio-file": "click",
+						"loop": "not-looping",
+						"volume": "-10",
+						"tag-optional": "\"\""
 					}
 				}
 			],

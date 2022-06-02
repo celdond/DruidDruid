@@ -632,6 +632,17 @@
 			],
 			"actions": [
 				{
+					"id": "play",
+					"objectClass": "Audio",
+					"sid": 672165407320707,
+					"parameters": {
+						"audio-file": "saveAnimal",
+						"loop": "not-looping",
+						"volume": "0",
+						"tag-optional": "\"\""
+					}
+				},
+				{
 					"id": "set-animation",
 					"objectClass": "Animal",
 					"sid": 876874562291288,
@@ -850,6 +861,17 @@
 					"behaviorType": "Bullet",
 					"parameters": {
 						"angle": "angle(Player.X, Player.Y, WorkerBullet.X, WorkerBullet.Y)"
+					}
+				},
+				{
+					"id": "play",
+					"objectClass": "Audio",
+					"sid": 642783800215077,
+					"parameters": {
+						"audio-file": "workerShoot",
+						"loop": "not-looping",
+						"volume": "-15",
+						"tag-optional": "\"\""
 					}
 				},
 				{

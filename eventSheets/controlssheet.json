@@ -18,6 +18,17 @@
 					"parameters": {
 						"layout": "Start Screen"
 					}
+				},
+				{
+					"id": "play",
+					"objectClass": "Audio",
+					"sid": 164472658767656,
+					"parameters": {
+						"audio-file": "click",
+						"loop": "not-looping",
+						"volume": "-10",
+						"tag-optional": "\"\""
+					}
 				}
 			],
 			"sid": 262970452886363

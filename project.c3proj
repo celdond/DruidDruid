@@ -223,7 +223,48 @@
 			"subfolders": []
 		},
 		"sound": {
-			"items": [],
+			"items": [
+				{
+					"name": "nymphShoot.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 552906365551719,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "saveAnimal.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 354930157520218,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "workerShoot.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 544880505469587,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "teleport.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 131650936873695,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "click.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 114835526816660,
+					"file-info": {
+						"purpose": "none"
+					}
+				}
+			],
 			"subfolders": []
 		},
 		"music": {
