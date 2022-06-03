@@ -116,6 +116,14 @@
 					}
 				},
 				{
+					"id": "set-z-elevation",
+					"objectClass": "Player",
+					"sid": 254851831712249,
+					"parameters": {
+						"z": "2"
+					}
+				},
+				{
 					"id": "play",
 					"objectClass": "Audio",
 					"sid": 425699153373604,
@@ -870,9 +878,12 @@
 			],
 			"actions": [
 				{
-					"id": "move-to-top",
+					"id": "set-z-elevation",
 					"objectClass": "tree1_leaves",
-					"sid": 380750577301768
+					"sid": 381715355540436,
+					"parameters": {
+						"z": "Player.ZElevation + 1"
+					}
 				}
 			],
 			"sid": 482783660879614
@@ -891,12 +902,39 @@
 			],
 			"actions": [
 				{
-					"id": "move-to-top",
+					"id": "set-z-elevation",
 					"objectClass": "tree_2",
-					"sid": 451240010690049
+					"sid": 115636501931047,
+					"parameters": {
+						"z": "Player.ZElevation + 1"
+					}
 				}
 			],
 			"sid": 222554868474831
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "for-each",
+					"objectClass": "System",
+					"sid": 548292698447998,
+					"parameters": {
+						"object": "Grass"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-z-elevation",
+					"objectClass": "Grass",
+					"sid": 897354848083780,
+					"parameters": {
+						"z": "Player.ZElevation - 1"
+					}
+				}
+			],
+			"sid": 282130576147182
 		}
 	],
 	"sid": 787248142491917
