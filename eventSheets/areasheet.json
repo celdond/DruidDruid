@@ -908,8 +908,8 @@
 			"conditions": [
 				{
 					"id": "on-collision-with-another-object",
-					"objectClass": "Player",
-					"sid": 880129340392066,
+					"objectClass": "PlayerControl",
+					"sid": 452795534802464,
 					"parameters": {
 						"object": "WorkerBullet"
 					}
