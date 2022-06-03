@@ -202,9 +202,9 @@
 				{
 					"id": "set-text",
 					"objectClass": "TimerText",
-					"sid": 584963730871785,
+					"sid": 935509724332381,
 					"parameters": {
-						"text": "\"Time: \" & (300 - int(time))"
+						"text": "\"Time: \" & (180 - int(time))"
 					}
 				}
 			],
@@ -313,8 +313,8 @@
 			"conditions": [
 				{
 					"id": "on-collision-with-another-object",
-					"objectClass": "Player",
-					"sid": 409739165826366,
+					"objectClass": "PlayerControl",
+					"sid": 523492367655433,
 					"parameters": {
 						"object": "NewArea1Teleport"
 					}
@@ -384,8 +384,8 @@
 			"conditions": [
 				{
 					"id": "on-collision-with-another-object",
-					"objectClass": "Player",
-					"sid": 532568056249475,
+					"objectClass": "PlayerControl",
+					"sid": 681657851995045,
 					"parameters": {
 						"object": "NewArea2Teleport"
 					}
@@ -455,8 +455,8 @@
 			"conditions": [
 				{
 					"id": "on-collision-with-another-object",
-					"objectClass": "Player",
-					"sid": 485436714276357,
+					"objectClass": "PlayerControl",
+					"sid": 684731801839239,
 					"parameters": {
 						"object": "NewArea3Teleport"
 					}
@@ -526,8 +526,8 @@
 			"conditions": [
 				{
 					"id": "on-collision-with-another-object",
-					"objectClass": "Player",
-					"sid": 976479994772137,
+					"objectClass": "PlayerControl",
+					"sid": 505107942201762,
 					"parameters": {
 						"object": "MainHubTeleport"
 					}
@@ -567,10 +567,10 @@
 				{
 					"id": "compare-time",
 					"objectClass": "System",
-					"sid": 843051438912318,
+					"sid": 531945169308959,
 					"parameters": {
 						"comparison": 0,
-						"time-seconds": "300"
+						"time-seconds": "180"
 					}
 				}
 			],

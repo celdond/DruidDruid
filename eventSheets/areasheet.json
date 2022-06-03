@@ -965,9 +965,9 @@
 				{
 					"id": "for-each-ordered",
 					"objectClass": "System",
-					"sid": 190837514833939,
+					"sid": 175631217356661,
 					"parameters": {
-						"object": "tree1_trunk",
+						"object": "tree1_leaves",
 						"expression": "0",
 						"order": "ascending"
 					}
@@ -976,8 +976,8 @@
 			"actions": [
 				{
 					"id": "set-animation",
-					"objectClass": "tree1_trunk",
-					"sid": 878674204964738,
+					"objectClass": "tree1_leaves",
+					"sid": 692880550724349,
 					"parameters": {
 						"animation": "\"Level \" & CurrentDegredationLevel",
 						"from": "beginning"
