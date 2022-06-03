@@ -187,7 +187,8 @@
 			"BackButton",
 			"HowToPlayButton",
 			"WorkerEnemy",
-			"WorkerBullet"
+			"WorkerBullet",
+			"TimerText"
 		],
 		"subfolders": []
 	},

@@ -932,6 +932,32 @@
 				}
 			],
 			"sid": 854762411024635
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-collision-with-another-object",
+					"objectClass": "Orb",
+					"sid": 439162900265802,
+					"parameters": {
+						"object": "WorkerBullet"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "destroy",
+					"objectClass": "Orb",
+					"sid": 603805614480424
+				},
+				{
+					"id": "destroy",
+					"objectClass": "WorkerBullet",
+					"sid": 170778825405596
+				}
+			],
+			"sid": 243234917020798
 		}
 	],
 	"sid": 583782141291131

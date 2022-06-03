@@ -125,6 +125,33 @@
 						"volume": "0",
 						"tag-optional": "\"\""
 					}
+				},
+				{
+					"id": "set-animation",
+					"objectClass": "NewArea1Teleport",
+					"sid": 116096067688629,
+					"parameters": {
+						"animation": "\"Level \" & Area1Degradation",
+						"from": "beginning"
+					}
+				},
+				{
+					"id": "set-animation",
+					"objectClass": "NewArea2Teleport",
+					"sid": 465646145874429,
+					"parameters": {
+						"animation": "\"Level \" & Area2Degradation",
+						"from": "beginning"
+					}
+				},
+				{
+					"id": "set-animation",
+					"objectClass": "NewArea3Teleport",
+					"sid": 723835639423980,
+					"parameters": {
+						"animation": "\"Level \" & Area3Degradation",
+						"from": "beginning"
+					}
 				}
 			],
 			"sid": 624127681084904
@@ -162,6 +189,14 @@
 					"sid": 905427334330420,
 					"parameters": {
 						"text": "\"Score: \" & Score"
+					}
+				},
+				{
+					"id": "set-text",
+					"objectClass": "TimerText",
+					"sid": 584963730871785,
+					"parameters": {
+						"text": "\"Time: \" & (300 - int(time))"
 					}
 				}
 			],
