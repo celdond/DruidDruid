@@ -855,6 +855,48 @@
 				}
 			],
 			"sid": 287906405665262
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "for-each",
+					"objectClass": "System",
+					"sid": 387754703118863,
+					"parameters": {
+						"object": "tree1_leaves"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "move-to-top",
+					"objectClass": "tree1_leaves",
+					"sid": 380750577301768
+				}
+			],
+			"sid": 482783660879614
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "for-each",
+					"objectClass": "System",
+					"sid": 236468760895494,
+					"parameters": {
+						"object": "tree_2"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "move-to-top",
+					"objectClass": "tree_2",
+					"sid": 451240010690049
+				}
+			],
+			"sid": 222554868474831
 		}
 	],
 	"sid": 787248142491917
