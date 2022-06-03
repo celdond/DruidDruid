@@ -1,16 +1,10 @@
 {
-	"name": "tree_1",
+	"name": "tree1_leaves",
 	"plugin-id": "Sprite",
-	"sid": 298336426895889,
+	"sid": 732610706993993,
 	"isGlobal": false,
 	"instanceVariables": [],
-	"behaviorTypes": [
-		{
-			"behaviorId": "solid",
-			"name": "Solid",
-			"sid": 312740509248706
-		}
-	],
+	"behaviorTypes": [],
 	"effectTypes": [],
 	"animations": {
 		"items": [
@@ -24,7 +18,7 @@
 						"originalSource": "",
 						"exportFormat": "png",
 						"exportQuality": 0.8,
-						"imageSpriteId": 7292360,
+						"imageSpriteId": 4180438,
 						"collisionPoly": {
 							"points": [
 								0.2109375,
@@ -49,7 +43,7 @@
 						"duration": 1
 					}
 				],
-				"sid": 495432407857826,
+				"sid": 136640544780477,
 				"name": "Level 1",
 				"isLooping": false,
 				"isPingPong": false,
@@ -67,12 +61,12 @@
 						"originalSource": "",
 						"exportFormat": "png",
 						"exportQuality": 0.8,
-						"imageSpriteId": 6201616,
+						"imageSpriteId": 9327828,
 						"useCollisionPoly": true,
 						"duration": 1
 					}
 				],
-				"sid": 816119272001208,
+				"sid": 918205919051840,
 				"name": "Level 2",
 				"isLooping": false,
 				"isPingPong": false,
@@ -90,12 +84,12 @@
 						"originalSource": "",
 						"exportFormat": "png",
 						"exportQuality": 0.8,
-						"imageSpriteId": 4546417,
+						"imageSpriteId": 8620476,
 						"useCollisionPoly": true,
 						"duration": 1
 					}
 				],
-				"sid": 903520094736879,
+				"sid": 752992630518353,
 				"name": "Level 3",
 				"isLooping": false,
 				"isPingPong": false,

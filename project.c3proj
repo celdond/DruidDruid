@@ -174,7 +174,7 @@
 			"ScoreText",
 			"Animal",
 			"Grass",
-			"tree_1",
+			"tree1_trunk",
 			"tree_2",
 			"PlayerControl",
 			"AnimalArray",
@@ -188,7 +188,8 @@
 			"HowToPlayButton",
 			"WorkerEnemy",
 			"WorkerBullet",
-			"TimerText"
+			"TimerText",
+			"tree1_leaves"
 		],
 		"subfolders": []
 	},

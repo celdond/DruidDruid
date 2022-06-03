@@ -967,7 +967,7 @@
 					"objectClass": "System",
 					"sid": 190837514833939,
 					"parameters": {
-						"object": "tree_1",
+						"object": "tree1_trunk",
 						"expression": "0",
 						"order": "ascending"
 					}
@@ -976,7 +976,7 @@
 			"actions": [
 				{
 					"id": "set-animation",
-					"objectClass": "tree_1",
+					"objectClass": "tree1_trunk",
 					"sid": 878674204964738,
 					"parameters": {
 						"animation": "\"Level \" & CurrentDegredationLevel",
