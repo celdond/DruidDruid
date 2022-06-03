@@ -72,7 +72,7 @@
 					"type": "tree_1",
 					"properties": {
 						"initially-visible": true,
-						"initial-animation": "Animation 1",
+						"initial-animation": "Level 1",
 						"initial-frame": 0,
 						"enable-collisions": true,
 						"live-preview": false
@@ -108,7 +108,7 @@
 					"type": "tree_2",
 					"properties": {
 						"initially-visible": true,
-						"initial-animation": "Animation 1",
+						"initial-animation": "Level 1",
 						"initial-frame": 0,
 						"enable-collisions": true,
 						"live-preview": false
@@ -144,7 +144,7 @@
 					"type": "tree_1",
 					"properties": {
 						"initially-visible": true,
-						"initial-animation": "Animation 1",
+						"initial-animation": "Level 1",
 						"initial-frame": 0,
 						"enable-collisions": true,
 						"live-preview": false
@@ -180,7 +180,7 @@
 					"type": "tree_2",
 					"properties": {
 						"initially-visible": true,
-						"initial-animation": "Animation 1",
+						"initial-animation": "Level 1",
 						"initial-frame": 0,
 						"enable-collisions": true,
 						"live-preview": false
@@ -216,7 +216,7 @@
 					"type": "tree_1",
 					"properties": {
 						"initially-visible": true,
-						"initial-animation": "Animation 1",
+						"initial-animation": "Level 1",
 						"initial-frame": 0,
 						"enable-collisions": true,
 						"live-preview": false
@@ -252,7 +252,7 @@
 					"type": "tree_1",
 					"properties": {
 						"initially-visible": true,
-						"initial-animation": "Animation 1",
+						"initial-animation": "Level 1",
 						"initial-frame": 0,
 						"enable-collisions": true,
 						"live-preview": false
@@ -288,7 +288,7 @@
 					"type": "tree_1",
 					"properties": {
 						"initially-visible": true,
-						"initial-animation": "Animation 1",
+						"initial-animation": "Level 1",
 						"initial-frame": 0,
 						"enable-collisions": true,
 						"live-preview": false
@@ -324,7 +324,7 @@
 					"type": "tree_2",
 					"properties": {
 						"initially-visible": true,
-						"initial-animation": "Animation 1",
+						"initial-animation": "Level 1",
 						"initial-frame": 0,
 						"enable-collisions": true,
 						"live-preview": false
@@ -360,7 +360,7 @@
 					"type": "tree_2",
 					"properties": {
 						"initially-visible": true,
-						"initial-animation": "Animation 1",
+						"initial-animation": "Level 1",
 						"initial-frame": 0,
 						"enable-collisions": true,
 						"live-preview": false
@@ -396,7 +396,7 @@
 					"type": "tree_1",
 					"properties": {
 						"initially-visible": true,
-						"initial-animation": "Animation 1",
+						"initial-animation": "Level 1",
 						"initial-frame": 0,
 						"enable-collisions": true,
 						"live-preview": false
@@ -432,7 +432,7 @@
 					"type": "tree_1",
 					"properties": {
 						"initially-visible": true,
-						"initial-animation": "Animation 1",
+						"initial-animation": "Level 1",
 						"initial-frame": 0,
 						"enable-collisions": true,
 						"live-preview": false
@@ -468,7 +468,7 @@
 					"type": "tree_2",
 					"properties": {
 						"initially-visible": true,
-						"initial-animation": "Animation 1",
+						"initial-animation": "Level 1",
 						"initial-frame": 0,
 						"enable-collisions": true,
 						"live-preview": false
@@ -504,7 +504,7 @@
 					"type": "tree_2",
 					"properties": {
 						"initially-visible": true,
-						"initial-animation": "Animation 1",
+						"initial-animation": "Level 1",
 						"initial-frame": 0,
 						"enable-collisions": true,
 						"live-preview": false
@@ -540,7 +540,7 @@
 					"type": "tree_2",
 					"properties": {
 						"initially-visible": true,
-						"initial-animation": "Animation 1",
+						"initial-animation": "Level 1",
 						"initial-frame": 0,
 						"enable-collisions": true,
 						"live-preview": false
@@ -576,7 +576,7 @@
 					"type": "tree_1",
 					"properties": {
 						"initially-visible": true,
-						"initial-animation": "Animation 1",
+						"initial-animation": "Level 1",
 						"initial-frame": 0,
 						"enable-collisions": true,
 						"live-preview": false
@@ -612,7 +612,7 @@
 					"type": "tree_1",
 					"properties": {
 						"initially-visible": true,
-						"initial-animation": "Animation 1",
+						"initial-animation": "Level 1",
 						"initial-frame": 0,
 						"enable-collisions": true,
 						"live-preview": false
@@ -1547,7 +1547,7 @@
 					"type": "tree_1",
 					"properties": {
 						"initially-visible": true,
-						"initial-animation": "Animation 1",
+						"initial-animation": "Level 1",
 						"initial-frame": 0,
 						"enable-collisions": true,
 						"live-preview": false
@@ -1583,7 +1583,7 @@
 					"type": "tree_2",
 					"properties": {
 						"initially-visible": true,
-						"initial-animation": "Animation 1",
+						"initial-animation": "Level 1",
 						"initial-frame": 0,
 						"enable-collisions": true,
 						"live-preview": false
@@ -1619,7 +1619,7 @@
 					"type": "tree_2",
 					"properties": {
 						"initially-visible": true,
-						"initial-animation": "Animation 1",
+						"initial-animation": "Level 1",
 						"initial-frame": 0,
 						"enable-collisions": true,
 						"live-preview": false
@@ -1655,7 +1655,7 @@
 					"type": "tree_2",
 					"properties": {
 						"initially-visible": true,
-						"initial-animation": "Animation 1",
+						"initial-animation": "Level 1",
 						"initial-frame": 0,
 						"enable-collisions": true,
 						"live-preview": false
@@ -1868,7 +1868,7 @@
 					"type": "tree_2",
 					"properties": {
 						"initially-visible": true,
-						"initial-animation": "Animation 1",
+						"initial-animation": "Level 1",
 						"initial-frame": 0,
 						"enable-collisions": true,
 						"live-preview": false
@@ -1904,7 +1904,7 @@
 					"type": "tree_1",
 					"properties": {
 						"initially-visible": true,
-						"initial-animation": "Animation 1",
+						"initial-animation": "Level 1",
 						"initial-frame": 0,
 						"enable-collisions": true,
 						"live-preview": false
@@ -2283,8 +2283,8 @@
 					"world": {
 						"x": 853,
 						"y": 512,
-						"width": 86,
-						"height": 86,
+						"width": 72,
+						"height": 72,
 						"originX": 0.5,
 						"originY": 0.5,
 						"color": [

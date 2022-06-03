@@ -50,7 +50,53 @@
 					}
 				],
 				"sid": 495432407857826,
-				"name": "Animation 1",
+				"name": "Level 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			},
+			{
+				"frames": [
+					{
+						"width": 128,
+						"height": 128,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 6201616,
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 816119272001208,
+				"name": "Level 2",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			},
+			{
+				"frames": [
+					{
+						"width": 128,
+						"height": 128,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 4546417,
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 903520094736879,
+				"name": "Level 3",
 				"isLooping": false,
 				"isPingPong": false,
 				"repeatCount": 1,

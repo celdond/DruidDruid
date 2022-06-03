@@ -660,10 +660,10 @@
 				{
 					"id": "compare-eventvar",
 					"objectClass": "System",
-					"sid": 153324730460674,
+					"sid": 764840794136431,
 					"parameters": {
 						"variable": "Area1Degradation",
-						"comparison": 0,
+						"comparison": 5,
 						"value": "4"
 					}
 				}
@@ -692,10 +692,10 @@
 				{
 					"id": "compare-eventvar",
 					"objectClass": "System",
-					"sid": 656172989790728,
+					"sid": 525904169410597,
 					"parameters": {
 						"variable": "Area2Degradation",
-						"comparison": 0,
+						"comparison": 5,
 						"value": "4"
 					}
 				}
@@ -724,10 +724,10 @@
 				{
 					"id": "compare-eventvar",
 					"objectClass": "System",
-					"sid": 980735508419699,
+					"sid": 629682014908334,
 					"parameters": {
 						"variable": "Area3Degradation",
-						"comparison": 0,
+						"comparison": 5,
 						"value": "4"
 					}
 				}
