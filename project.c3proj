@@ -189,7 +189,8 @@
 			"WorkerEnemy",
 			"WorkerBullet",
 			"TimerText",
-			"tree1_leaves"
+			"tree1_leaves",
+			"AttButton"
 		],
 		"subfolders": []
 	},
@@ -206,7 +207,8 @@
 			"NewArea2",
 			"NewArea3",
 			"Start Screen",
-			"Control Screen"
+			"Control Screen",
+			"Att Screen"
 		],
 		"subfolders": []
 	},
@@ -215,7 +217,8 @@
 			"GameSheet",
 			"AreaSheet",
 			"StartSheet",
-			"ControlsSheet"
+			"ControlsSheet",
+			"AttSheet"
 		],
 		"subfolders": []
 	},

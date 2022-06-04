@@ -88,6 +88,38 @@
 				}
 			],
 			"sid": 341866359852704
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-clicked",
+					"objectClass": "AttButton",
+					"sid": 899436179512576
+				}
+			],
+			"actions": [
+				{
+					"id": "go-to-layout",
+					"objectClass": "System",
+					"sid": 482600116182490,
+					"parameters": {
+						"layout": "Att Screen"
+					}
+				},
+				{
+					"id": "play",
+					"objectClass": "Audio",
+					"sid": 627327302023642,
+					"parameters": {
+						"audio-file": "click",
+						"loop": "not-looping",
+						"volume": "-10",
+						"tag-optional": "\"\""
+					}
+				}
+			],
+			"sid": 185921756377151
 		}
 	],
 	"sid": 751255208241579

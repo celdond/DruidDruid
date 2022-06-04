@@ -1,0 +1,38 @@
+{
+	"name": "AttSheet",
+	"events": [
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-clicked",
+					"objectClass": "BackButton",
+					"sid": 119891987272997
+				}
+			],
+			"actions": [
+				{
+					"id": "go-to-layout",
+					"objectClass": "System",
+					"sid": 605467502904663,
+					"parameters": {
+						"layout": "Start Screen"
+					}
+				},
+				{
+					"id": "play",
+					"objectClass": "Audio",
+					"sid": 987497599472528,
+					"parameters": {
+						"audio-file": "click",
+						"loop": "not-looping",
+						"volume": "-10",
+						"tag-optional": "\"\""
+					}
+				}
+			],
+			"sid": 924605844453673
+		}
+	],
+	"sid": 372191513759130
+}
