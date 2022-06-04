@@ -985,33 +985,6 @@
 				}
 			],
 			"sid": 844669163287756
-		},
-		{
-			"eventType": "block",
-			"conditions": [
-				{
-					"id": "for-each-ordered",
-					"objectClass": "System",
-					"sid": 953506371924840,
-					"parameters": {
-						"object": "tree_2",
-						"expression": "0",
-						"order": "ascending"
-					}
-				}
-			],
-			"actions": [
-				{
-					"id": "set-animation",
-					"objectClass": "tree_2",
-					"sid": 941214410009558,
-					"parameters": {
-						"animation": "\"Level \" & CurrentDegredationLevel",
-						"from": "beginning"
-					}
-				}
-			],
-			"sid": 345935441824938
 		}
 	],
 	"sid": 583782141291131
