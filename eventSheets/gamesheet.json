@@ -124,17 +124,6 @@
 					}
 				},
 				{
-					"id": "play",
-					"objectClass": "Audio",
-					"sid": 425699153373604,
-					"parameters": {
-						"audio-file": "spooky jungle boogie",
-						"loop": "looping",
-						"volume": "0",
-						"tag-optional": "\"\""
-					}
-				},
-				{
 					"id": "set-animation",
 					"objectClass": "NewArea1Teleport",
 					"sid": 116096067688629,

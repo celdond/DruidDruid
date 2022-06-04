@@ -5,6 +5,30 @@
 			"eventType": "block",
 			"conditions": [
 				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 793991195995849
+				}
+			],
+			"actions": [
+				{
+					"id": "play",
+					"objectClass": "Audio",
+					"sid": 127274636881336,
+					"parameters": {
+						"audio-file": "spooky jungle boogie",
+						"loop": "looping",
+						"volume": "-5",
+						"tag-optional": "\"\""
+					}
+				}
+			],
+			"sid": 399519978662251
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
 					"id": "on-clicked",
 					"objectClass": "StartButton",
 					"sid": 903510059019459
