@@ -556,10 +556,10 @@
 				{
 					"id": "compare-time",
 					"objectClass": "System",
-					"sid": 827624978363108,
+					"sid": 863074087906794,
 					"parameters": {
 						"comparison": 0,
-						"time-seconds": "180"
+						"time-seconds": "15"
 					}
 				}
 			],
@@ -616,14 +616,6 @@
 					"parameters": {
 						"x": "LayoutWidth / 2",
 						"y": "LayoutHeight / 2"
-					}
-				},
-				{
-					"id": "set-time-scale",
-					"objectClass": "System",
-					"sid": 829701734783716,
-					"parameters": {
-						"time-scale": "0"
 					}
 				}
 			],
@@ -815,10 +807,10 @@
 				{
 					"id": "set-position",
 					"objectClass": "ScoreText",
-					"sid": 773545585381172,
+					"sid": 728800939893529,
 					"parameters": {
-						"x": "ViewportWidth(1) / 2 + 20",
-						"y": "ViewportHeight(1) / 2 - 50"
+						"x": "ViewportWidth(1) / 2 - 50",
+						"y": "ViewportHeight(1) / 2 - 110"
 					}
 				},
 				{
@@ -903,6 +895,30 @@
 				}
 			],
 			"sid": 282130576147182
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-animation-finished",
+					"objectClass": "Game_Over_Temp",
+					"sid": 798384646271430,
+					"parameters": {
+						"animation": "\"Win\""
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-time-scale",
+					"objectClass": "System",
+					"sid": 341535506180872,
+					"parameters": {
+						"time-scale": "0"
+					}
+				}
+			],
+			"sid": 909943390165844
 		}
 	],
 	"sid": 787248142491917
