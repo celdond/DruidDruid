@@ -217,8 +217,7 @@
 			"GameSheet",
 			"AreaSheet",
 			"StartSheet",
-			"ControlsSheet",
-			"AttSheet"
+			"ControlsSheet"
 		],
 		"subfolders": []
 	},
