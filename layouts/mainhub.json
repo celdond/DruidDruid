@@ -2710,8 +2710,8 @@
 					"instanceVariables": {},
 					"behaviors": {},
 					"world": {
-						"x": 749,
-						"y": -9,
+						"x": 640,
+						"y": 9,
 						"width": 200,
 						"height": 25,
 						"originX": 0,
@@ -2737,8 +2737,8 @@
 					"instanceVariables": {},
 					"behaviors": {},
 					"world": {
-						"x": 149.26196771618712,
-						"y": 99.74641180833558,
+						"x": 77,
+						"y": 33,
 						"width": 132.52393543237423,
 						"height": 49.492823616671146,
 						"originX": 0.5,
@@ -2779,8 +2779,8 @@
 					"instanceVariables": {},
 					"behaviors": {},
 					"world": {
-						"x": 90,
-						"y": 83,
+						"x": 19,
+						"y": 16,
 						"width": 200,
 						"height": 48.133970479161064,
 						"originX": 0,
@@ -2808,8 +2808,8 @@
 					"instanceVariables": {},
 					"behaviors": {},
 					"world": {
-						"x": 705,
-						"y": 99.746412,
+						"x": 569,
+						"y": 32.40463133252112,
 						"width": 132.52393543237423,
 						"height": 49.492823616671146,
 						"originX": 0.5,
@@ -2850,8 +2850,8 @@
 					"instanceVariables": {},
 					"behaviors": {},
 					"world": {
-						"x": 566,
-						"y": 83,
+						"x": 427.0000000000001,
+						"y": 17.166483865529557,
 						"width": 200,
 						"height": 30,
 						"originX": 0,
@@ -2925,6 +2925,6 @@
 	"unboundedScrolling": false,
 	"vpX": 0.5,
 	"vpY": 0.5,
-	"projection": "perspective",
+	"projection": "orthographic",
 	"eventSheet": "GameSheet"
 }
