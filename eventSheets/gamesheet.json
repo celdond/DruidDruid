@@ -556,10 +556,10 @@
 				{
 					"id": "compare-time",
 					"objectClass": "System",
-					"sid": 918057351712144,
+					"sid": 827624978363108,
 					"parameters": {
 						"comparison": 0,
-						"time-seconds": "10"
+						"time-seconds": "180"
 					}
 				}
 			],
