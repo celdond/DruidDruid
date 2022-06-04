@@ -191,7 +191,7 @@
 				{
 					"id": "set-text",
 					"objectClass": "TimerText",
-					"sid": 935509724332381,
+					"sid": 133944331294197,
 					"parameters": {
 						"text": "\"Time: \" & (180 - int(time))"
 					}
@@ -556,10 +556,10 @@
 				{
 					"id": "compare-time",
 					"objectClass": "System",
-					"sid": 531945169308959,
+					"sid": 918057351712144,
 					"parameters": {
 						"comparison": 0,
-						"time-seconds": "180"
+						"time-seconds": "10"
 					}
 				}
 			],
@@ -576,7 +576,7 @@
 				{
 					"id": "create-object",
 					"objectClass": "System",
-					"sid": 942772115163414,
+					"sid": 730836010584361,
 					"parameters": {
 						"object-to-create": "Game_Over_Temp",
 						"layer": "1",
@@ -596,6 +596,15 @@
 					}
 				},
 				{
+					"id": "set-size",
+					"objectClass": "Game_Over_Temp",
+					"sid": 512435494831126,
+					"parameters": {
+						"width": "854",
+						"height": "480"
+					}
+				},
+				{
 					"id": "destroy",
 					"objectClass": "Player",
 					"sid": 980270191409295
@@ -603,40 +612,10 @@
 				{
 					"id": "set-position",
 					"objectClass": "PlayerControl",
-					"sid": 676784512069900,
+					"sid": 924616529165096,
 					"parameters": {
 						"x": "LayoutWidth / 2",
 						"y": "LayoutHeight / 2"
-					}
-				},
-				{
-					"id": "set-font-color",
-					"objectClass": "ScoreText",
-					"sid": 770066897190250,
-					"parameters": {
-						"color": "rgbEx(255, 255, 255)"
-					}
-				},
-				{
-					"id": "move-to-top",
-					"objectClass": "ScoreText",
-					"sid": 523838408740411
-				},
-				{
-					"id": "set-font-size",
-					"objectClass": "ScoreText",
-					"sid": 491040654598726,
-					"parameters": {
-						"size-pt": "28"
-					}
-				},
-				{
-					"id": "set-position",
-					"objectClass": "ScoreText",
-					"sid": 217392790321471,
-					"parameters": {
-						"x": "ViewportWidth(1) / 2 + 20",
-						"y": "ViewportHeight(1) / 2 - 50"
 					}
 				},
 				{
@@ -917,9 +896,9 @@
 				{
 					"id": "set-z-elevation",
 					"objectClass": "Grass",
-					"sid": 897354848083780,
+					"sid": 964354930342152,
 					"parameters": {
-						"z": "Player.ZElevation - 1"
+						"z": "Player.ZElevation - 2"
 					}
 				}
 			],
